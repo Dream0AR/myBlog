@@ -111,6 +111,9 @@ post:
     # label array item can be one or more
     custom_label_list: [ "Trainee", "Engineer", "Architect", "CTO", "BOSS" ]
 
+  mathjax:
+    enable: true
+    per_page: true
 
 # ---------------------------------------------------------------------------------------
 # Code copy
