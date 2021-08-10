@@ -1,7 +1,7 @@
 ---
 title: LaTeX-测试
 date: 2021-07-20 15:29:40
-tags:
+categories: 博客创建
 mathjax: true
 ---
 
