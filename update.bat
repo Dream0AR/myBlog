@@ -1,3 +1,4 @@
+@echo off
 git pull
 git add .
 set now=%date% %time%
