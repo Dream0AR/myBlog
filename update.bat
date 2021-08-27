@@ -1,14 +1,14 @@
 @echo off
-echo "git pull"
+echo git pull
 git pull
 
-echo "git add ."
+echo git add .
 git add .
 
 set now=%date% %time%
-echo "Update time:" %now%
+echo Update time: %now%
 git commit -m "update at %now%"
 
-echo "git push"
+echo git push
 git push
 pause
