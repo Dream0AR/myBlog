@@ -55,8 +55,10 @@ $$\rho_V\omega=
             \begin{cases}
                 \rho_V|_{U\cap V}\cdot\omega, \quad & \text{on}\quad U\cap V\\
                 0, &\text{on} \quad U-U\cap V       
-            \end{cases},$$ 这里$\rho_V$定义域是$V$,
-在$U$上自然地零延拓至0. $\omega$定义域是$U\cap V$,
+            \end{cases},$$
+
+这里$\rho_V$定义域是$V$, 在$U$上自然地零延拓至0.
+$\omega$定义域是$U\cap V$,
 因此此时$\rho_V\omega$扩充到$U$上也可以给定定义, 且是光滑的.
 
 在$V$上类似定义$\rho_U\omega$. 取$\xi=(-\rho_V\omega, \rho_U\omega)$,
@@ -134,4 +136,4 @@ $B^1(S^1)=\ker \int_{S^1}.$
 
 从而$H^1(S^1)=Z^1(S^1)/B^1(S^1)=\Omega^1(S^1)/\ker \int_{S^1}\cong \mathbb{R}$.
 
-文章最后更新于 2021-09-20 15:04:49 
+文章最后更新于 2021-10-09 12:32:30 
