@@ -99,8 +99,18 @@ include:
 exclude:
 ignore:
 
+# Local Search
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+plugins:
+    - hexo-renderer-mathjax
+    
 ## Themes: https://hexo.io/themes/
 theme: keep
 

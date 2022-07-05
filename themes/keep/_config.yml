@@ -133,7 +133,7 @@ toc:
   number: false
 
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
-  expand_all: false
+  expand_all: true
 
   # If true, open TOC every time when you enter the article page
   init_open: false
@@ -167,7 +167,6 @@ website_count:
 local_search:
   enable: true
   preload: true     # Preload the search data when the page loads
-
 
 # ---------------------------------------------------------------------------------------
 # Comment plugin
@@ -218,14 +217,14 @@ lazyload:
 # CDN
 # ---------------------------------------------------------------------------------------
 cdn:
-  enable: false
+  enable: true
 
 
 # ---------------------------------------------------------------------------------------
 # PJAX
 # ---------------------------------------------------------------------------------------
 pjax:
-  enable: true
+  enable: false
 
 
 # ---------------------------------------------------------------------------------------
