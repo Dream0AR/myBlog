@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="记录生活">
+    <meta name="author" content="DreamAR">
+    
+    <title>
+        
+            《黎曼几何初步》笔记(6)-弧长第一与第二变分公式 |
+        
+        梦之居
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"dream0ar.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"记录生活"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                梦之居
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">《黎曼几何初步》笔记(6)-弧长第一与第二变分公式</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">DreamAR</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2022-04-22 21:06:47
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%87%A0%E4%BD%95/">几何</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%87%A0%E4%BD%95/%E9%BB%8E%E6%9B%BC%E5%87%A0%E4%BD%95/">黎曼几何</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="第一变分公式"><a href="#第一变分公式" class="headerlink" title="第一变分公式"></a>第一变分公式</h2><p>我们来研究$\gamma$曲线的长度极短性.
+取单参数曲线族$\{\gamma_u\}_{-\varepsilon\le u\le \varepsilon},$
+满足$\gamma_0=\gamma,$ $\gamma_u(a)=\gamma(a),$ $\gamma_u(b)=\gamma(b).$
+记$L(u):[-\varepsilon,\varepsilon]\rightarrow \mathbb{R}$为曲线$\gamma_u$的长度.
+那么当$L’(0)=0,$ $L’’(0)&gt;0$时, $L(0)$处有极小值;
+若这对所有满足条件的单参数曲线族$\{\gamma_u\}$都成立,
+则局部上$\gamma$取得极短长度.</p>
+<p>我们先取消$\gamma_u(a)=\gamma(a),$ $\gamma_u(b)=\gamma(b)$的假设,
+令$U$为$\{\gamma_u\}$的横截向量场, $T$切于所有曲线$\gamma_u(t).$
+不妨设$t$是基曲线$\gamma$的弧长参数, $|\dot\gamma|=1.$ 那么,</p>
+<script type="math/tex; mode=display">
+L(u)=\int_a^b |\dot\gamma_u(t)|dt,\quad L'(u)=\int_a^b\frac{d {} }{d {}u}\sqrt{\left<{}\dot\gamma_u(t),\dot\gamma_u(t)\right>}dt,</script><p>其中积分项可以写为:</p>
+<script type="math/tex; mode=display">
+U\sqrt{\left<{}T,T\right>}=\frac{1}{|T|}\left<{}T,D_UT\right>=\frac{1}{|T|}\left<{}T,D_TU\right>=\frac{1}{|T|}\left(T\left<{}T,U\right>-\left<{}D_TT,U\right>\right),</script><p>这样我们就得到了<strong>弧长第一变分公式</strong>:</p>
+<script type="math/tex; mode=display">
+L'(0)=\int_a^b\frac{d {} }{d {}t}\left<{}\dot\gamma,U\right>-\left<{}D_{\dot\gamma}\dot\gamma,U\right>dt=\left<{}\dot\gamma(t),U(t)\right>|_a^b-\int_a^b\left<{}\ddot\gamma(t),U(t)\right>.</script><p>称$\{\gamma_u\}$为$\gamma$的<strong>正常变分</strong>, 若$\gamma_u(a)=\gamma(a),$
+$\gamma_u(b)=\gamma(b),$ $\gamma_0=\gamma.$ 对于正常变分, $U(a)=U(b)=0,$
+因此第一变分公式中第一项消失. 现在我们可以看到测地线的另一等价描述:</p>
+<p><strong>引理 1</strong>. <em>曲线$\gamma:[a,b]\rightarrow M$是测地线的充要条件是, 它是长度函数关于所有正常变分的临界点.</em> </p>
+<p>设$N$为$M$中闭子流形, $x\notin N,$
+那么$\,\exists\,y\in N$使得$d(x,y)=d(x,N).$
+取最短的正规测地线$\gamma:[a,b]\rightarrow M$连接$x,y.$</p>
+<p><strong>引理 2</strong>. <em>$\gamma\perp N,$ 即$\dot\gamma(b)\perp N_y.$</em> </p>
+<p><strong>证:</strong> 设$Y\in N_y,$ 取$\xi:[-\varepsilon,\varepsilon]\rightarrow N,$
+$\xi(0)=y,$ $\dot\xi(0)=Y.$ 那么可以取到单参数曲线族$\{\gamma_u\},$
+$\gamma_0=\gamma,$ $\gamma_u(a)=\gamma(a)=x,$ $\gamma_u(b)=\xi(u).$
+这样横截向量场$U$满足$U(x)=0,$ $U(y)=Y,$ 从而:</p>
+<script type="math/tex; mode=display">
+L'(0)=\left<{}\dot\gamma(b),U(b)\right>=\left<{}\dot\gamma(b),Y\right>=0 \quad \Rightarrow \quad \gamma\perp N.</script><h2 id="第二变分公式"><a href="#第二变分公式" class="headerlink" title="第二变分公式"></a>第二变分公式</h2><p>一般当$L’(0)=0$时, 计算$L’’(0)$才有意义. 故现设$\gamma$为正规测地线, 则:</p>
+<script type="math/tex; mode=display">
+L''(u)=\int_a^b\frac{d {} }{d {}u}\left(\frac{1}{|T|}\left<{}T,D_TU\right>\right)dt,</script><p>其中积分项可写为: </p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+ U\left(\frac{1}{|T|}\left<{}T,D_TU\right>\right)&=-\frac{1}{|T|^3}\left<{}T,D_TU\right>^2+\frac{1}{|T|}\left<{}D_TU,D_TU\right>+\frac{1}{|T|}\left<{}T,D_UD_TU\right>\\
+ &=-\frac{1}{|T|^3}\left(T\left<{}T,U\right>-\left<{}D_TT,U\right>\right)^2+\frac{1}{|T|}|D_TU|^2+\frac{1}{|T|}\left(-\left<{}T,R_{UT}U\right>+\left<{}D_TD_UU,T\right>\right).
+ \end{aligned}</script><p> 带入到$u=0$时, 注意此时$\gamma$为正规测地线,
+因此: </p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+ L''(0)&=\int_a^b -\left(\frac{d {} }{d {}t}\left<{}\dot\gamma,U\right>\right)^2+|\dot U(t)|^2-\left<{}\dot \gamma,R_{U\dot\gamma}U\right>+\frac{d {} }{d {}t}\left<{}D_UU,\dot\gamma\right>dt\\
+ &=\left<{}D_UU,\dot\gamma\right>|^b_a+\int_a^b\left(|\dot U(t)|^2-\left<{}R_{\dot\gamma U}\dot\gamma,U\right>-\left(\left<{}\dot\gamma,U\right>'\right)^2\right)dt.
+ \end{aligned}</script><p>这就是<strong>弧长第二变分公式</strong>, 决定项为曲率项,
+称$\left&lt;{}D_UU,\dot\gamma\right&gt;|^b_a$为边界项,
+当$\{\gamma_u\}$为正常变分时边界项消失.</p>
+<p>由于$U(t)$沿$\dot\gamma$的切向分量并不改变$\gamma$的长度,
+我们只需考虑正交分量$U^\perp(t),$
+即设$\left&lt;{}U^\perp,\dot\gamma\right&gt;=0,$ $U=U^\perp+f\dot\gamma.$ 那么</p>
+<script type="math/tex; mode=display">
+|\dot U(t)|^2-\left(\left<{}\dot\gamma(t),U(t)\right>'\right)^2=|\dot U^\perp (t)|^2+f'(t)^2-f'(t)^2=|\dot U^\perp(t)|^2,</script><script type="math/tex; mode=display">
+\left<{}R_{\dot\gamma U}\dot\gamma,U\right>=\left<{}R_{\dot\gamma U^\perp}\dot\gamma, U^\perp\right>.</script><p>因此弧长第二变分公式也可写为:</p>
+<script type="math/tex; mode=display">
+L''(0)=\left<{}D_UU,\dot\gamma\right>|^b_a+\int_a^b \left(|\dot U^\perp(t)|^2-\left<{}R_{\dot\gamma U^\perp}\dot\gamma,U^\perp\right>\right)dt.</script><p>后面的应用日后补充.</p>
+<p>文章最后更新于 2022-04-22 21:06:49 </p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：《黎曼几何初步》笔记(6)-弧长第一与第二变分公式</li>
+        <li>本文作者：DreamAR</li>
+        <li>创建时间：2022-04-22 21:06:47</li>
+        <li>
+            本文链接：https://dream0ar.github.io/2022/04/22/《黎曼几何初步》笔记(6)-弧长第一与第二变分公式/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/04/27/%E3%80%8A%E9%BB%8E%E6%9B%BC%E5%87%A0%E4%BD%95%E5%88%9D%E6%AD%A5%E3%80%8B%E7%AC%94%E8%AE%B0(13)-%E5%AD%90%E6%B5%81%E5%BD%A2%E5%92%8C%E7%AC%AC%E4%BA%8C%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">《黎曼几何初步》笔记(13)-子流形和第二基本形式</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/04/21/%E3%80%8A%E9%BB%8E%E6%9B%BC%E5%87%A0%E4%BD%95%E5%88%9D%E6%AD%A5%E3%80%8B%E7%AC%94%E8%AE%B0(5)-Jacobi%E5%9C%BA%E5%92%8CCartan-Hadamard%E5%AE%9A%E7%90%86/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">《黎曼几何初步》笔记(5)-Jacobi场和Cartan-Hadamard定理</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div class="valine-container">
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script >
+            function loadValine() {
+                new Valine({
+                    el: '#vcomments',
+                    appId: '56D8XuBPhYU7FHTBxfIdzwej-gzGzoHsz',
+                    appKey: 'llErW21yrdS1MwbbpOjVkkLW',
+                    meta: ['nick', 'mail', 'link'],
+                    avatar: 'wavatar',
+                    enableQQ: true,
+                    placeholder: '欢迎交流讨论',
+                    lang: 'zh-CN'.toLowerCase()
+                });
+
+                function getAuthor(language) {
+                    switch (language) {
+                        case 'en':
+                            return 'Author';
+                        case 'zh-CN':
+                            return '博主';
+                        default:
+                            return 'Master';
+                    }
+                }
+
+                // Add "Author" identify
+                const getValineDomTimer = setInterval(() => {
+                    const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+                    if (vcards.length > 0) {
+                        let author = 'DreamAR';
+
+                        if (author) {
+                            for (let vcard of vcards) {
+                                const vnick_dom = vcard.querySelector('.vhead .vnick');
+                                const vnick = vnick_dom.innerHTML;
+                                if (vnick === author) {
+                                    vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                                }
+                            }
+                        }
+                        clearInterval(getValineDomTimer);
+                    } else {
+                        clearInterval(getValineDomTimer);
+                    }
+                }, 2000);
+            }
+
+            if ('false') {
+                const loadValineTimeout = setTimeout(() => {
+                    loadValine();
+                    clearTimeout(loadValineTimeout);
+                }, 1000);
+            } else {
+                window.addEventListener('DOMContentLoaded', loadValine);
+            }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>Wed Jul 14 2021 08:00:00 GMT+0800 (中国标准时间)</span>&nbsp;-&nbsp;
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">DreamAR</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+            <div class="icp-info info-item"><a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">京ICP备2022021488号-1</a></div>
+        
+        <div style="width:300px;margin:0 auto; padding:20px 0;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039835" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010802039835号</p></a>
+        </div>
+    
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E5%8F%98%E5%88%86%E5%85%AC%E5%BC%8F"><span class="nav-text">第一变分公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E5%8F%98%E5%88%86%E5%85%AC%E5%BC%8F"><span class="nav-text">第二变分公式</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+		TeX: { 
+			equationNumbers: { autoNumber: "AMS" },
+			extensions: ["AMSmath.js", "AMSsymbols.js"]
+		},
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i) 
+			all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

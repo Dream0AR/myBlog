@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="记录生活">
+    <meta name="author" content="DreamAR">
+    
+    <title>
+        
+            论文笔记-Forman曲率与Ollivier曲率 |
+        
+        梦之居
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"dream0ar.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"记录生活"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                梦之居
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">论文笔记-Forman曲率与Ollivier曲率</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">DreamAR</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-10-23 10:50:16
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/%E7%A7%91%E7%A0%94/">科研</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/%E7%A7%91%E7%A0%94/%E5%9B%BE%E4%B8%8A%E6%9B%B2%E7%8E%87/">图上曲率</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>Characterizations of Forman curvature - Jürgen Jost, Florentin Münch</p>
+<h2 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h2><h3 id="胞腔复形与图"><a href="#胞腔复形与图" class="headerlink" title="胞腔复形与图"></a>胞腔复形与图</h3><p>给定胞腔复形$X=\bigcup X_k.$
+取$\delta:X_k\rightarrow X_{k+1}$为关联(incident)算子,
+$\delta v(z)=\pm 1$或$0.$ 要求胞腔复形满足如下性质:</p>
+<ul>
+<li><p>$\dim(z)\ge 1\Rightarrow \,\exists\,x\prec z;$</p>
+</li>
+<li><p>$|\{w\in X_0:\delta w(x)=1\}|=|\{w\in X_0:\delta w(x)=-1\}|=1,$
+$\,\forall\,x\in X_1;$ (每边两顶点)</p>
+</li>
+<li><p>$\dim(z)-\dim(v)=2,$ $\{x:v\prec x\prec z\}\neq \varnothing$</p>
+<p>$\Rightarrow$ $|\{x:v\prec x\prec z\}|=2$ 且
+$\pm 1\in \{\delta v(x)\delta x(z):x\in X\}.$ (diamond性&amp;
+$\delta^2=0$)</p>
+</li>
+<li><p>(定向)连通性;</p>
+</li>
+<li><p>$\{x:x\prec z\}=\{x:x\prec z’\},$ $\dim z\ge 1\Rightarrow z=z’.$
+(简单图)</p>
+</li>
+</ul>
+<p>$\,\forall\,x,y\in X,$
+记$x\sim y$若$\,\exists\,v\prec x,y$或$x,y\prec z.$ 这诱导了距离:</p>
+<script type="math/tex; mode=display">d(x,y)=\inf\{n:x=x_0\sim\cdots\sim x_n=y\}.</script><p>注意在$X_0$上这并不是一般的路径距离. 在复形维数较高时,
+点到点可以凭借高维胞腔更快速地转移.</p>
+<p>定义带权内积 <script type="math/tex">\left<{}f,g\right>=\sum_x f(x)g(x)m(x).</script></p>
+<p>将$x$视为$1_x,$ 线性扩张$\delta:C(X)\rightarrow C(X).$
+定义伴随$\delta^\ast :C(X)\rightarrow C(X),$</p>
+<script type="math/tex; mode=display">\delta^\ast  z(x)=\frac{1}{m(x)}\left<{}\delta^\ast  z,x\right>=\frac{1}{m(x)}\left<{}\delta x,z\right>=\frac{m(z)}{m(x)}\delta x(z).</script><p>这与Forman定义中的$\partial$有区别,</p>
+<script type="math/tex; mode=display">\partial z(x)=\delta x(z)=\frac{m(x)}{m(z)}\delta^\ast  z(x).</script><h3 id="Hodge-Laplacian"><a href="#Hodge-Laplacian" class="headerlink" title="Hodge Laplacian"></a>Hodge Laplacian</h3><p>定义Hodge Laplacian <script type="math/tex">H=\delta \delta^\ast +\delta^\ast \delta.</script></p>
+<p>计算$Hy(x),$ 分别计算如下式子:</p>
+<script type="math/tex; mode=display">\delta\delta^\ast  y(x)=\frac{1}{m(x)}\left<{}\delta^\ast y,\delta^\ast  x\right>=\frac{1}{m(x)}\sum_{v\prec x,y}m(v)\frac{m(y)}{m(v)}\delta v(y)\frac{m(x)}{m(v)}\delta v(x)=\sum_{v\prec x,y}\frac{m(y)}{m(v)}\delta v(x)\delta v(y),</script><p>更简单的有:</p>
+<script type="math/tex; mode=display">\delta^\ast \delta y(x)=\sum_{x,y\prec z}\frac{m(z)}{m(x)}\delta x(z)\delta y(z).</script><p><strong>注意与Forman定义不同, 维数较小的胞腔权重总是在分母上.</strong></p>
+<p>当$X=X_0\cup X_1$为赋权定向图时, 记$m(x)=m(v,w)=m(w,v),$ $x\in X_1,$
+$v,w$为两顶点. $H$作用在$C(X_0)$上为:</p>
+<script type="math/tex; mode=display">\begin{aligned}
+            Hf(v)=\delta^*\delta f(v)&=\sum_w\sum_{v,w\prec x}\frac{m(x)}{m(v)}\delta v(x)\delta w(x)f(w)\\
+            &=\sum_{v\prec x}\frac{m(x)}{m(v)}\sum_{w\prec x}\delta v(x)\delta w(x)f(w)\\
+            &=\sum_{w\neq v}\frac{m(v,w)}{m(v)}(f(v)-f(w))          
+        \end{aligned}</script><p>即$H_0$就是带权图的Laplacian.</p>
+<h3 id="Forman曲率"><a href="#Forman曲率" class="headerlink" title="Forman曲率"></a>Forman曲率</h3><p>对$x\neq y\in X_1,$ 第一个和中至多有一项非零,
+第二个和中非零项符号均一致. 当两个和中均出现非零项时,
+有$\delta v(x)\delta v(y)=-\delta x(z)\delta y(z).$ 因此</p>
+<script type="math/tex; mode=display">|Hy(x)|=\left|\sum_{v\prec x,y}\frac{m(y)}{m(v)}-\sum_{x,y\prec z}\frac{m(z)}{m(x)}\right|.</script><p>容易得到</p>
+<script type="math/tex; mode=display">Hx(x)=\sum_{v\prec x}\frac{m(x)}{m(v)}+\sum_{x\prec z}\frac{m(z)}{m(x)}.</script><p>对(任意)自伴算子$H,$ 有分解 <script type="math/tex">H=\Delta+D,</script> $\Delta$为极小对角占优算子,
+$D$为对角阵. 显然有 <script type="math/tex">Dx(x)=Hx(x)-\sum_{y\neq x}|Hy(x)|.</script></p>
+<p>对Hodge Laplacian做分解, 将得到的$D$称为<strong>Forman曲率</strong>. 对$x\in X_1,$</p>
+<script type="math/tex; mode=display">F(x)=\sum_{v\prec x}\frac{m(x)}{m(v)}+\sum_{x\prec z}\frac{m(z)}{m(x)}-\sum_{x\neq y}\left|\sum_{v\prec x,y}\frac{m(y)}{m(v)}-\sum_{x,y\prec z}\frac{m(z)}{m(x)}\right|.</script><p>若$m\equiv 1,$</p>
+<script type="math/tex; mode=display">F(x)=\#\{v\in X_0:v\prec x\}+\#\{z\in X_2:x\prec z\}-\#\{\text{parallel neighbors of } x\},</script><p>与Forman曲率确实是一样的.</p>
+<p>但事实上得到$F$的过程与Forman曲率并不完全一致, 对一般的$m$二者并不相同.
+Forman在分解Hodge Laplacian前, 先对$H$做了对称化, 即在常权重下是对称阵.</p>
+<p>不过根据步骤的不同, 可以转化两种不同的Forman曲率.</p>
+<h2 id="对偶关系"><a href="#对偶关系" class="headerlink" title="对偶关系"></a>对偶关系</h2><h3 id="Forman曲率的对偶表示"><a href="#Forman曲率的对偶表示" class="headerlink" title="Forman曲率的对偶表示"></a>Forman曲率的对偶表示</h3><p>对复形$K=(X,\delta,m),$ $K’=(X’,\delta,m’),$ 记$K’\le_k K,$
+若满足如下条件:</p>
+<ol>
+<li><p>$X_j=X_j’,$ $\,\forall\,j\le k;$</p>
+</li>
+<li><p>$X_j’\subset X_j,$ $\,\forall\,j&gt;k;$</p>
+</li>
+<li><p>$m(x)=m’(x),$ $\,\forall\,\dim x\le k;$</p>
+</li>
+<li><p>$\delta’v(x)=\delta v(x),$ $\,\forall\,x,v\in X’.$</p>
+</li>
+</ol>
+<p>也就是$K’\subset K$且它们的带权定向$k$-骨架相同.</p>
+<p><strong>定理 1.1</strong>. <em>$K=(X,\delta,m),$ $x\in X_k,$ $k\in \mathbb{N}.$ 那么有</em> </p>
+<script type="math/tex; mode=display">\max_{K'\le_k K}F'(x)=\min_{
+                \begin{subarray}{c}
+                    h(x)=1\\
+                    |h|\le 1\\
+                    \delta h\cdot \delta x\le 0
+            \end{subarray} }\delta\delta^*h(x)</script><h3 id="Ollivier曲率"><a href="#Ollivier曲率" class="headerlink" title="Ollivier曲率"></a>Ollivier曲率</h3><p>对$x\in X_1,$ 其Ollivier曲率可写为</p>
+<script type="math/tex; mode=display">\kappa(x)=\inf_{\begin{subarray}{c}
+                    \delta f(x)=1\\
+                    |\delta f|\le 1
+            \end{subarray} }\delta\delta^*\delta f(x),</script><p>事实上只需考虑$f\in C(X_0).$</p>
+<p>显然有如下转化:</p>
+<script type="math/tex; mode=display">\kappa(x)=\inf_{\begin{subarray}{c}
+                    h(x)=1\\
+                    |h|\le 1\\
+                    h\in \delta(C(X_0))
+            \end{subarray} }\delta\delta^*h(x),</script><p><strong>定理 1.2</strong>. <em>$K=(X,\delta,m),$ $x\in X_k,$ $k\in \mathbb{N}.$ 若所有含$x$的长度不超过$5$的圈都是$2$-胞腔, 那么有:</em> </p>
+<script type="math/tex; mode=display">\kappa(x)=\inf_{\begin{subarray}{c}
+                    h(x)=1\\
+                    |h|\le 1\\
+                    \delta x\cdot\delta h\le 0
+            \end{subarray} }\delta\delta^*h(x),</script><h3 id="两者联系"><a href="#两者联系" class="headerlink" title="两者联系"></a>两者联系</h3><p><strong>推论 1.3</strong>. <em>$G=(X,\delta,m)$为$1$维胞腔复形, 那么$\,\forall\,x\in X_1,$</em> </p>
+<script type="math/tex; mode=display">\kappa(x)=\max_{G\le_1 K}F_K(x),</script><p><strong>证:</strong> 令$G\le_1 X,$ $X$包含所有可能的$2$-胞腔,
+自然全体长度不超过$5$的圈都是$2$-胞腔. 那么:</p>
+<script type="math/tex; mode=display">\kappa(x)=\inf_{\begin{subarray}{c}
+                            h(x)=1\\
+                            |h|\le 1\\
+                            \delta x\cdot\delta h\le 0
+                    \end{subarray} }\delta\delta^*h(x)=\max_{K\le_1 X} F_K(x)=\max_{X^{(1)}\le_1 K}F_K(x)=\max_{G\le_1 K}F_K(x).</script><p>也就是可以通过粘贴合适权重的$2$-胞腔,
+使得新图的Forman曲率与原有的Ollivier曲率相同.</p>
+<p><strong>推论 1.4</strong>. <em>$K=(X,\delta,m),$ $x\in X,$ 那么:</em> </p>
+<script type="math/tex; mode=display">F(x)\le\kappa(x).</script><p><strong>证:</strong></p>
+<script type="math/tex; mode=display">F(x)\le \max_{K^{(1)}\le_1 X}F_X(x)=\kappa_{K^{(1)} }(x)=\kappa(x).</script><h2 id="调整距离"><a href="#调整距离" class="headerlink" title="调整距离"></a>调整距离</h2><h3 id="基本性质"><a href="#基本性质" class="headerlink" title="基本性质"></a>基本性质</h3><p>定义Ollivier曲率时可以选取其它的距离. 赋予图另一权重$\omega,$
+定义路径距离$d_\omega:X_0\rightarrow [0,\infty),$</p>
+<script type="math/tex; mode=display">d_\omega(v,w):=\inf\{\sum_{k=1}^n \omega(v_k,v_{k-1}):v=v_0\sim\cdots\sim v_n=w\}.</script><p>总是假设$\omega$是非退化的, 即边总是顶点间的最短距离. 定义关于$\omega,$
+或称关于$d_\omega$的Ollivier曲率:</p>
+<script type="math/tex; mode=display">\omega(x)\kappa_\omega(x):=\inf_{\begin{subarray}{c}
+        \delta f(x)=\omega(x)\\
+        |\delta f|\le \omega\end{subarray} }\delta\delta^*\delta f.</script><p>非退化的要求实际上意味着在$X_1$上Ollivier曲率是有限的.</p>
+<p>为了令Forman曲率与新的Ollivier曲率相容,
+改造其为关于$\omega$的Forman曲率:</p>
+<script type="math/tex; mode=display">F_\omega:=Hx(x)-\sum_{y\neq x}\frac{\omega(y)}{\omega(x)}|Hy(x)|.</script><p>$x\in X_1$时, 即为</p>
+<script type="math/tex; mode=display">F_\omega(x)=\sum_{v\prec x}\frac{m(x)}{m(v)}+\sum_{x\prec z}\frac{m(z)}{m(x)}-\sum_{x\neq y}\frac{\omega(y)}{\omega(x)}\left|\sum_{v\prec x,y}\frac{m(y)}{m(v)}-\sum_{x,y\prec z}\frac{m(z)}{m(x)}\right|.</script><p>事实上可以使它与之前得到Forman曲率的过程一致:</p>
+<script type="math/tex; mode=display">\omega F_\omega=D(\omega H)=\omega(x) Hx(x)-\sum_{y\neq x}|\omega(y)H_y(x)|.</script><h3 id="对偶性质"><a href="#对偶性质" class="headerlink" title="对偶性质"></a>对偶性质</h3><p>类似地有:</p>
+<p><strong>定理 1.5</strong>. <em>$K=(X,\delta,m,\omega),$ $x\in X_k,$ $k\in \mathbb{N}.$ 那么有</em> </p>
+<script type="math/tex; mode=display">\max_{K'\le_k K}\omega(x)F_\omega'(x)=\min_{
+            \begin{subarray}{c}
+                h(x)=\omega(x)\\
+                |h|\le \omega\\
+                \delta h\cdot \delta x\le 0
+        \end{subarray} }\delta\delta^*h(x)</script><p><strong>定理 1.6</strong>. <em>$K=(X,\delta,m,\omega),$ $x\in X_k,$ $k\in \mathbb{N}.$ 若所有含$x$的极小圈都是$2$-胞腔, 那么有:</em> </p>
+<script type="math/tex; mode=display">\omega(x)\kappa(x)=\inf_{\begin{subarray}{c}
+                h(x)=\omega(x)\\
+                |h|\le \omega\\
+                \delta x\cdot\delta h\le 0
+        \end{subarray} }\delta\delta^*h(x),</script><p><strong>推论 1.7</strong>. <em>$G=(X,\delta,m,\omega)$为$1$维胞腔复形, 那么$\,\forall\,x\in X_1,$</em> </p>
+<script type="math/tex; mode=display">\kappa_\omega(x)=\max_{G\le_1 K}F_{K,\omega}(x),</script><p><strong>推论 1.8</strong>. <em>$K=(X,\delta,m,\omega),$ $x\in X,$ 那么:</em> </p>
+<script type="math/tex; mode=display">F_\omega(x)\le\kappa_\omega(x).</script><h3 id="Forman曲率原定义"><a href="#Forman曲率原定义" class="headerlink" title="Forman曲率原定义"></a>Forman曲率原定义</h3><p>Forman定义的关于权重$w$的曲率为:</p>
+<script type="math/tex; mode=display">\frac{F_o(x)}{w(x)}:=\sum_{v\prec x} \frac{w(v)}{w(x)}+\sum_{x\prec z}\frac{w(x)}{w(z)}-\sum_{y\neq x}\left|\sum_{v\prec x,y}\frac{w(v)}{\sqrt{w(y)w(x)} }-\sum_{x,y\prec z}\frac{\sqrt{w(x)w(y)} }{w(z)}\right|,</script><p>$x\in X_1.$ 可以看出去掉极小对角占优算子前, 算子$H$是已经对称化过的.</p>
+<p>文中定义的是:</p>
+<script type="math/tex; mode=display">F_\omega(x)=\sum_{v\prec x}\frac{m(x)}{m(v)}+\sum_{x\prec z}\frac{m(z)}{m(x)}-\sum_{x\neq y}\frac{\omega(y)}{\omega(x)}\left|\sum_{v\prec x,y}\frac{m(y)}{m(v)}-\sum_{x,y\prec z}\frac{m(z)}{m(x)}\right|,</script><p>不难发现当$m=\frac{1}{w},$ $\omega=\sqrt{w}$时,
+有$F_\omega(x)=\frac{F_o(x)}{w(x)}.$</p>
+<p>文章最后更新于 2021-10-23 11:13:29 </p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：论文笔记-Forman曲率与Ollivier曲率</li>
+        <li>本文作者：DreamAR</li>
+        <li>创建时间：2021-10-23 10:50:16</li>
+        <li>
+            本文链接：https://dream0ar.github.io/2021/10/23/论文笔记-Forman曲率与Ollivier曲率/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/10/24/%E3%80%8A%E7%8E%B0%E4%BB%A3PDE%E5%9F%BA%E7%A1%80%E3%80%8B%E7%AC%94%E8%AE%B0(4)-Sobolev%E7%A9%BA%E9%97%B4/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">《现代PDE基础》笔记(4)-Sobolev空间</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/10/20/%E3%80%8A%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2%E3%80%8B%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%A7%A9%E5%AE%9A%E7%90%86/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">《微分流形》第二章-秩定理</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div class="valine-container">
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script >
+            function loadValine() {
+                new Valine({
+                    el: '#vcomments',
+                    appId: '56D8XuBPhYU7FHTBxfIdzwej-gzGzoHsz',
+                    appKey: 'llErW21yrdS1MwbbpOjVkkLW',
+                    meta: ['nick', 'mail', 'link'],
+                    avatar: 'wavatar',
+                    enableQQ: true,
+                    placeholder: '欢迎交流讨论',
+                    lang: 'zh-CN'.toLowerCase()
+                });
+
+                function getAuthor(language) {
+                    switch (language) {
+                        case 'en':
+                            return 'Author';
+                        case 'zh-CN':
+                            return '博主';
+                        default:
+                            return 'Master';
+                    }
+                }
+
+                // Add "Author" identify
+                const getValineDomTimer = setInterval(() => {
+                    const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+                    if (vcards.length > 0) {
+                        let author = 'DreamAR';
+
+                        if (author) {
+                            for (let vcard of vcards) {
+                                const vnick_dom = vcard.querySelector('.vhead .vnick');
+                                const vnick = vnick_dom.innerHTML;
+                                if (vnick === author) {
+                                    vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                                }
+                            }
+                        }
+                        clearInterval(getValineDomTimer);
+                    } else {
+                        clearInterval(getValineDomTimer);
+                    }
+                }, 2000);
+            }
+
+            if ('false') {
+                const loadValineTimeout = setTimeout(() => {
+                    loadValine();
+                    clearTimeout(loadValineTimeout);
+                }, 1000);
+            } else {
+                window.addEventListener('DOMContentLoaded', loadValine);
+            }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>Wed Jul 14 2021 08:00:00 GMT+0800 (中国标准时间)</span>&nbsp;-&nbsp;
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">DreamAR</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+            <div class="icp-info info-item"><a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">京ICP备2022021488号-1</a></div>
+        
+        <div style="width:300px;margin:0 auto; padding:20px 0;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039835" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010802039835号</p></a>
+        </div>
+    
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%AE%9A%E4%B9%89"><span class="nav-text">基本定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%9E%E8%85%94%E5%A4%8D%E5%BD%A2%E4%B8%8E%E5%9B%BE"><span class="nav-text">胞腔复形与图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hodge-Laplacian"><span class="nav-text">Hodge Laplacian</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Forman%E6%9B%B2%E7%8E%87"><span class="nav-text">Forman曲率</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E5%81%B6%E5%85%B3%E7%B3%BB"><span class="nav-text">对偶关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Forman%E6%9B%B2%E7%8E%87%E7%9A%84%E5%AF%B9%E5%81%B6%E8%A1%A8%E7%A4%BA"><span class="nav-text">Forman曲率的对偶表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ollivier%E6%9B%B2%E7%8E%87"><span class="nav-text">Ollivier曲率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E8%80%85%E8%81%94%E7%B3%BB"><span class="nav-text">两者联系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%83%E6%95%B4%E8%B7%9D%E7%A6%BB"><span class="nav-text">调整距离</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8"><span class="nav-text">基本性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E5%81%B6%E6%80%A7%E8%B4%A8"><span class="nav-text">对偶性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Forman%E6%9B%B2%E7%8E%87%E5%8E%9F%E5%AE%9A%E4%B9%89"><span class="nav-text">Forman曲率原定义</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+		TeX: { 
+			equationNumbers: { autoNumber: "AMS" },
+			extensions: ["AMSmath.js", "AMSsymbols.js"]
+		},
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i) 
+			all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

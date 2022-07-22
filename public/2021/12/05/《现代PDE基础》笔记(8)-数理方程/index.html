@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="记录生活">
+    <meta name="author" content="DreamAR">
+    
+    <title>
+        
+            《现代PDE基础》笔记(8)-数理方程 |
+        
+        梦之居
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"dream0ar.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"记录生活"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                梦之居
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">《现代PDE基础》笔记(8)-数理方程</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">DreamAR</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-12-05 20:29:14
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/PDE/">PDE</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/PDE/%E7%8E%B0%E4%BB%A3PDE%E5%9F%BA%E7%A1%80/">现代PDE基础</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="经典方程"><a href="#经典方程" class="headerlink" title="经典方程"></a>经典方程</h2><p>回忆数理方程, 我们最常接触的是如下方程:</p>
+<ol>
+<li><p>$-\Delta u=f,$ <strong>Poisson方程</strong>. 讨论边值问题,
+边界条件为Dirichlet或Neumann型.</p>
+</li>
+<li><p>$u_{tt}-\Delta u=f,$ <strong>波动方程</strong>. 无界区域上讨论Cauchy问题,
+有界区域上讨论初边值问题. 需对$u$与$u_t$给定初始条件,
+边界条件为Dirichlet或Neumann型.</p>
+</li>
+<li><p>$u_t-\Delta u=f,$ <strong>热传导方程</strong>. 讨论内容基本同波方程,
+初始条件只需对$u$给定.</p>
+</li>
+</ol>
+<p>考虑上述方程的一般化形式, 有如下线性方程,
+讨论的问题与上面经典问题都是对应的, 不再重复. 系数都设为光滑的,
+且满足<strong>椭圆性条件</strong>:
+$\sum_{ij=1}^n a_{ij(x)}\xi_i\xi_j\ge \alpha \Vert\xi\Vert^2,$
+$\,\forall\,\xi\neq 0.$ 不妨设系数是对称的.</p>
+<ol>
+<li><p>$Lu=\sum_{i,j=1}^{n}a_{ij}(x)u_{ij}+\sum_{i=1}^n b_i(x)u_i+c(x)u=f,$
+<strong>二阶椭圆方程</strong>.</p>
+</li>
+<li><p>$u_{tt}-\sum_{i,j=1}^n\frac{\partial {} }{\partial {}x_i}(a_{ij}(t,x)\frac{\partial {}u}{\partial {}x_j})+\sum_{i=1}^n b_i(t,x)\frac{\partial {}u}{\partial {}x_i}+c(t,x)u=f,$
+<strong>二阶双曲型方程</strong>.</p>
+</li>
+<li><p>$u_{t}-\sum_{i,j=1}^n\frac{\partial {} }{\partial {}x_i}(a_{ij}(t,x)\frac{\partial {}u}{\partial {}x_j})+\sum_{i=1}^n b_i(t,x)\frac{\partial {}u}{\partial {}x_i}+c(t,x)u=f,$
+<strong>二阶抛物型方程</strong>.</p>
+</li>
+</ol>
+<p>我们从考虑<strong>经典解</strong>($C^2$解)转移到考虑<strong>弱解</strong>(广义函数解) (Weak
+Formulation). 由<strong>Stokes公式</strong>:</p>
+<script type="math/tex; mode=display">\int_\Omega d\omega=\int_{\partial\Omega} \omega,</script><p>我们有<strong>Gauss-Green公式</strong>:</p>
+<script type="math/tex; mode=display">\int_\Omega \partial_i fdx=\int_\Omega \nabla \cdot e_i fdx=\int_{\partial\Omega} n\cdot e_i \gamma fdS=\int_{\partial\Omega} n_i\gamma fdS.</script><p>其中$\gamma$为迹, 使得公式对更多函数成立. 进而我们有<strong>分部积分公式</strong>:</p>
+<script type="math/tex; mode=display">\int_{\Omega} \partial_i fgdx+\int_\Omega f\partial_i gdx=\int_\Omega{\partial_i (fg)}dx=\int_{\partial\Omega} n_i\gamma(fg)dS.</script><p>对偏微分方程的求解, 一种常用的方法是<strong>算子半群</strong>方法,
+从而将问题转为求解无穷维ODE.</p>
+<h2 id="对偶算子"><a href="#对偶算子" class="headerlink" title="对偶算子"></a>对偶算子</h2><p>考虑Dirichlet齐次边界问题, $u\in H_0^1(\Omega).$
+作用测试函数$v\in H_0^1(\Omega)$到方程上: </p>
+<script type="math/tex; mode=display">\begin{aligned}
+            \int_\Omega vLudx=&{\color{blue}\sum_{i,j=1}^n\int_{\Omega}\frac{\partial {} }{\partial {}x_i}(a_{ij}(x)u_jv)dx}-\sum_{i,j=1}^n\int_{\Omega}u_j\frac{\partial {} }{\partial {}x_i}(a_{ij}(x)v)dx\\
+            &+{\color{blue}\sum_{i=1}^n \int_\Omega \frac{\partial {} }{\partial {}x_i}(b_i(x)uv)dx}-\sum_{i=1}^n \int_\Omega u\frac{\partial {} }{\partial {}x_i}(b_i(x)v)dx+\int_\Omega c(x)uvdx\\
+            =&-\sum_{i,j=1}^n\int_{\Omega}u_j\frac{\partial {} }{\partial {}x_i}(a_{ij}(x)v)dx-\sum_{i=1}^n \int_\Omega u\frac{\partial {} }{\partial {}x_i}(b_i(x)v)dx+\int_\Omega c(x)uvdx\\
+            =&{\color{blue}\sum_{i,j=1}^n\int_{\Omega}\frac{\partial {} }{\partial {}x_j}\left(u\frac{\partial {} }{\partial {}x_i}(a_{ij}(x)v)\right)dx}-\sum_{i,j=1}^n\int_{\Omega}u_j\frac{\partial {} }{\partial {}x_i}(a_{ij}(x)v)dx\\\
+            &-\sum_{i=1}^n \int_\Omega u\frac{\partial {} }{\partial {}x_i}(b_i(x)v)dx+\int_\Omega c(x)uvdx\\
+            =&\sum_{i,j=1}^n\int_{\Omega}u\frac{\partial^2 {} }{\partial {}x_i\partial {}x_j}(a_{ij}(x)v)dx-\sum_{i=1}^n \int_\Omega u\frac{\partial {} }{\partial {}x_i}(b_i(x)v)dx+\int_\Omega c(x)uvdx\\
+            =&\int_\Omega uL^*vdx.
+        \end{aligned}</script><p> 推导中多次用到Gauss-Green公式.
+由于函数具齐次边界条件, 边界项(蓝色项)全部消失.
+由此我们得到了对偶算子$L^\ast .$</p>
+<p>类似地, 对双曲型, 抛物型方程, 我们也有对偶算子:</p>
+<script type="math/tex; mode=display">M^\ast v=\frac{\partial {}^2v}{\partial {}t^2}-\sum_{i,j=1}^n\frac{\partial {} }{\partial {}x_i}(a_{ij}(x)v_j)-\sum_{i=1}^n\frac{\partial {} }{\partial {}x_i}(b_i(x)v)+c(x)v,</script><script type="math/tex; mode=display">M^\ast v=-\frac{\partial {}v}{\partial {}t}-\sum_{i,j=1}^n\frac{\partial {} }{\partial {}x_i}(a_{ij}(x)v_j)-\sum_{i=1}^n\frac{\partial {} }{\partial {}x_i}(b_i(x)v)+c(x)v.</script><p>对偶算子的重要性在于, 由泛函分析, 有如下重要命题:</p>
+<p><strong>命题 1</strong>. <em>对Hilbert空间$H,$ 有界线性算子$A:H\rightarrow H,$ 问题$Ax=b,$ $\,\forall\,b\in H$的存在性, 等价于问题$A^\ast y=0$的唯一性(即只有零解).</em> </p>
+<p><strong>证:</strong> 存在性$\Rightarrow$唯一性: $\,\forall\,y$使得$A^\ast y=0,$
+存在$x$使得$Ax=y.$ 因此,</p>
+<script type="math/tex; mode=display">0=(x,A^\ast y)=(Ax,y)=(y,y) \,\Rightarrow\, y=0.</script><p>唯一性$\Rightarrow$存在性: 对$b\in H,$ 只需找$x$满足:</p>
+<script type="math/tex; mode=display">(Ax,y)=(b,y),\quad \forall y\in H.</script><p>取$A^\ast :H\rightarrow B=\operatorname{Im} A^\ast ,$
+为连续线性算子.它是单射因为$A^\ast y=0$只有零解. 由逆算子定理,
+$(A^\ast )^{-1}:B\rightarrow H$也是连续线性算子.</p>
+<p>定义连续线性泛函$l_b:B\rightarrow \mathbb{R}$:</p>
+<script type="math/tex; mode=display">l_b(v)=(b,(A^\ast )^{-1}v)=(b,u),</script><p> 这里$A^\ast u=v.$ 由Riesz表示定理,
+存在$x\in B$使得$l_b(v)=(x,v).$ 因此对任意$y\in H:$</p>
+<script type="math/tex; mode=display">l_b(A^\ast y)=(b,y)=(x,A^\ast y)=(Ax,y).</script><p>这说明我们找到的$x\in B$正是$Ax=b$的解.</p>
+<h2 id="能量方法"><a href="#能量方法" class="headerlink" title="能量方法"></a>能量方法</h2><h3 id="乘子法"><a href="#乘子法" class="headerlink" title="乘子法"></a>乘子法</h3><p>由对偶算子, 在大多数情形, 我们只需处理唯一性的证明, 而这是容易的.
+通常采用能量方法, 通过求导由能量守恒说明唯一性.
+能量方法往往来源于乘子法. 对椭圆方程, 考虑能量形式$\int uLu$(势能);
+对波动方程, 考虑能量形式$\int u_t Mu$(动能); 对热传导方程,
+考虑能量形式$\int uMu$(势能).</p>
+<p>以椭圆方程为例. 对$u\in H_0^1(\Omega),$ 我们有: </p>
+<script type="math/tex; mode=display">\begin{aligned}
+            -\int_\Omega uLudx=&\int_\Omega \sum_{i,j=1}^n a_{ij}(x)u_iu_jdx+\int_\Omega \sum_{i=1}^n\left(\sum_{j=1}^n\frac{\partial {}a_{ij} }{\partial {}x_j}-b_i(x)\right)u_iudx-\int_\Omega c(x)u^2dx\\
+            \ge &\int_\Omega \alpha \sum_{i=1}^n u_i^2dx-\int_\Omega C'\sum_{i=1}^n \left(\frac{\alpha}{2C'} u_i^2+\frac{C'}{2\alpha}u^2\right)dx-\int_\Omega C''u^2dx\\
+            \ge &\frac{\alpha}{2}\Vert\nabla u\Vert-C\Vert u\Vert.
+        \end{aligned}</script><p>过程中用到了不等式$2ab\le \varepsilon a^2+\frac{1}{\varepsilon} b^2.$
+该不等式称为Garding不等式:</p>
+<p><strong>定理 2</strong> (Garding不等式). <em>设$\Omega$为$\mathbb{R}^n$中有界区域, 边界光滑. 若$L$为二阶椭圆型算子, 则$\,\forall\,u\in H_0^1(\Omega),$ 有如下不等式:</em> </p>
+<script type="math/tex; mode=display">\operatorname{Re}(-Lu,u)_{L^2(\Omega)}\ge C_1\Vert u\Vert_{1}^2-C_2\Vert u\Vert^2.</script><p>其中系数可以具体计算出来. 当$C_2\le 0$时, 对问题$Lu=0$考虑唯一性:</p>
+<script type="math/tex; mode=display">C_1\Vert u\Vert_{1}^2-C_2\Vert u\Vert^2\le 0\,\Rightarrow\, u\equiv 0.</script><p>对线性方程, $Lu=0$的唯一性与$Lu=f$的唯一性当然是等价的.</p>
+<h3 id="特征问题"><a href="#特征问题" class="headerlink" title="特征问题"></a>特征问题</h3><p>一般地, $C_2$不见得非正. 但是对充分大的$\Lambda\in \mathbb{R},$
+考虑$(-L+\Lambda)u=0$就可以强行将Garding不等式中右侧项调至非负,
+此时问题解具有唯一性. 因此可以在像空间定义逆算子$(-L+\Lambda)^{-1}.$
+我们进行如下推导: </p>
+<script type="math/tex; mode=display">\begin{aligned}
+            C_1\Vert u\Vert^2_{1}&\le \left<{}(-L+\Lambda)u,u\right>\\
+            &\le \Vert(-L+\Lambda)u\Vert\Vert u\Vert\le \Vert(-L+\Lambda)u\Vert\Vert u\Vert_{H^1}\\
+            \Vert u\Vert_{1}&\le C_3\Vert(-L+\Lambda)u\Vert\\
+            \Vert(-L+\Lambda)^{-1}v\Vert_{1}&\le C_3 \Vert v\Vert
+        \end{aligned}</script><p> 因此$(-L+\Lambda)^{-1}$为有界算子.
+由于$H_0^1\stackrel{c}\hookrightarrow L^2$为紧嵌入, 它还是紧算子.
+其特征值可列, $\mu_i\rightarrow 0.$</p>
+<p>考虑特征问题: </p>
+<script type="math/tex; mode=display">\begin{aligned}
+            -Lu&=\lambda u\\
+            (-L+\Lambda)u&=(\lambda+\Lambda)u\\
+            \frac{1}{\lambda+\Lambda}u&=(-L+\Lambda)^{-1}u=\mu u\\
+        \end{aligned}</script><p> 因此$-L$特征值也是可列的,
+且$\mu_i=\frac{1}{\lambda_i+\Lambda}\rightarrow 0$ $\Rightarrow$
+$\lambda_i\rightarrow \infty,$ 特征值趋于无穷.</p>
+<p>文章最后更新于 2021-12-05 20:30:25 </p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：《现代PDE基础》笔记(8)-数理方程</li>
+        <li>本文作者：DreamAR</li>
+        <li>创建时间：2021-12-05 20:29:14</li>
+        <li>
+            本文链接：https://dream0ar.github.io/2021/12/05/《现代PDE基础》笔记(8)-数理方程/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/12/07/%E9%97%AD%E5%80%BC%E5%9F%9F%E5%AE%9A%E7%90%86/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">闭值域定理</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/12/01/%E3%80%8A%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2%E3%80%8B%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%BC%A0%E9%87%8F/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">《微分流形》第五章-张量</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div class="valine-container">
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script >
+            function loadValine() {
+                new Valine({
+                    el: '#vcomments',
+                    appId: '56D8XuBPhYU7FHTBxfIdzwej-gzGzoHsz',
+                    appKey: 'llErW21yrdS1MwbbpOjVkkLW',
+                    meta: ['nick', 'mail', 'link'],
+                    avatar: 'wavatar',
+                    enableQQ: true,
+                    placeholder: '欢迎交流讨论',
+                    lang: 'zh-CN'.toLowerCase()
+                });
+
+                function getAuthor(language) {
+                    switch (language) {
+                        case 'en':
+                            return 'Author';
+                        case 'zh-CN':
+                            return '博主';
+                        default:
+                            return 'Master';
+                    }
+                }
+
+                // Add "Author" identify
+                const getValineDomTimer = setInterval(() => {
+                    const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+                    if (vcards.length > 0) {
+                        let author = 'DreamAR';
+
+                        if (author) {
+                            for (let vcard of vcards) {
+                                const vnick_dom = vcard.querySelector('.vhead .vnick');
+                                const vnick = vnick_dom.innerHTML;
+                                if (vnick === author) {
+                                    vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                                }
+                            }
+                        }
+                        clearInterval(getValineDomTimer);
+                    } else {
+                        clearInterval(getValineDomTimer);
+                    }
+                }, 2000);
+            }
+
+            if ('false') {
+                const loadValineTimeout = setTimeout(() => {
+                    loadValine();
+                    clearTimeout(loadValineTimeout);
+                }, 1000);
+            } else {
+                window.addEventListener('DOMContentLoaded', loadValine);
+            }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>Wed Jul 14 2021 08:00:00 GMT+0800 (中国标准时间)</span>&nbsp;-&nbsp;
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">DreamAR</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+            <div class="icp-info info-item"><a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">京ICP备2022021488号-1</a></div>
+        
+        <div style="width:300px;margin:0 auto; padding:20px 0;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039835" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010802039835号</p></a>
+        </div>
+    
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E6%96%B9%E7%A8%8B"><span class="nav-text">经典方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E5%81%B6%E7%AE%97%E5%AD%90"><span class="nav-text">对偶算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%BD%E9%87%8F%E6%96%B9%E6%B3%95"><span class="nav-text">能量方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%98%E5%AD%90%E6%B3%95"><span class="nav-text">乘子法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E5%BE%81%E9%97%AE%E9%A2%98"><span class="nav-text">特征问题</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+		TeX: { 
+			equationNumbers: { autoNumber: "AMS" },
+			extensions: ["AMSmath.js", "AMSsymbols.js"]
+		},
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i) 
+			all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

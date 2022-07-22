@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="记录生活">
+    <meta name="author" content="DreamAR">
+    
+    <title>
+        
+            《微分流形》第一章-流形间的映射 |
+        
+        梦之居
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"dream0ar.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"记录生活"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                梦之居
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">《微分流形》第一章-流形间的映射</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">DreamAR</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-09-26 16:39:38
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%87%A0%E4%BD%95/">几何</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%87%A0%E4%BD%95/%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2/">微分流形</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="映射的微分学"><a href="#映射的微分学" class="headerlink" title="映射的微分学"></a>映射的微分学</h2><h3 id="映射"><a href="#映射" class="headerlink" title="映射"></a>映射</h3><p>$M^m$是$C^\infty$流形, $f:M\rightarrow \mathbb{R},$ $p\in M.$
+若$\,\exists\,$含$p$点允许坐标系$(U,\varphi)$(即$\in [\mathcal{F}]$)使$f\circ \varphi^{-1}$在$\varphi(p)$的某个邻域内是$C^\infty$的,
+则称$f$在$p$点$C^\infty.$ 若$f$点点光滑, 则称$f\in C^\infty(M).$</p>
+<p>允许坐标系限制在更小的开子集上显然仍是允许坐标系,
+因此上述定义等价于存在某个允许坐标系使得$f\circ \varphi^{-1}$在整个$\varphi(U)$上是$C^\infty$的.</p>
+<p>由于坐标变换是光滑的, 上述概念与允许坐标系选择无关. 类似地,
+可以定义$f$在$p$点是$C^r$的, 或$f\in C^r(M).$</p>
+<h3 id="映照"><a href="#映照" class="headerlink" title="映照"></a>映照</h3><p>设$M^m,N^n$是光滑流形, $F:M\rightarrow N,$ $p\in M.$
+若存在含$p,q=F(p)$的允许坐标系$(U,\varphi),(V,\psi),$ $F(U)\subset V,$
+使得<strong>局部表示</strong>$\widehat{F}:=\psi\circ F\circ\varphi^{-1}$在$\varphi(p)$某邻域是$C^\infty$的,
+则称$F$在$p$点是$C^\infty$的. 若$F$点点$C^\infty,$
+则称$F$是<strong>光滑映照</strong>, 记为$F\in C^\infty(M,N).$</p>
+<p><strong>注 1.1</strong>. <em>若$F(U)\not\subset V,$ 则可取$\widetilde{U}=F^{-1}(V)\cap U.$</em> </p>
+<p>同理上述概念与允许坐标系选取无关.</p>
+<h3 id="微分同胚"><a href="#微分同胚" class="headerlink" title="微分同胚"></a>微分同胚</h3><p>如果$(U,\varphi)$是$M$的允许坐标系,
+则$\varphi:U\rightarrow \varphi(U)$及$\varphi^{-1}:\varphi(U)\rightarrow U$依定义显然是光滑的,
+再取同样的允许坐标系$(U,\varphi)$说明即可. 注意$U$从$M$上诱导光滑结构,
+为开子流形, 而非嵌入到外围空间的子流形(微分结构不同),
+如$\widetilde{\varphi}:U\rightarrow \varphi(U)\hookrightarrow \mathbb{R}^k$不见得光滑.</p>
+<p>易见光滑映照的复合仍是光滑映照.</p>
+<p>设$F:M\rightarrow N$是光滑流形间的双射. 如果$F,F^{-1}$是光滑的,
+则称$F:M\rightarrow N$是$C^\infty$微分同胚.
+两个微分同胚的光滑流形视为一样的.</p>
+<p>例如球极投影$F:S^2\setminus\{p\}\rightarrow\mathbb{R}^2$, scaling
+$B^n(1)\rightarrow \mathbb{R}^n$都是光滑同胚.</p>
+<h3 id="微分结构问题"><a href="#微分结构问题" class="headerlink" title="微分结构问题"></a>微分结构问题</h3><p>一个基本问题是, 给定拓扑流形$M^m,$ 其上是否一定存在$C^\infty$结构?
+存在的话是否(在$C^\infty$同胚意义下)唯一? 若$M$有两个微分结构,
+问是否有光滑同胚$(M,\mathcal{F}_1)\approx (M,\mathcal{F}_2).$
+注意同胚的选取不见得取恒等映射$\mathrm{id},$
+因此不能简简单单只验证$\mathcal{F}_1,\mathcal{F}_2$是否$C^\infty$相容.</p>
+<p>已知结果:</p>
+<ul>
+<li><p>$\mathbb{R}^m,$ $m\neq 4$上存在唯一的$C^\infty$结构;</p>
+</li>
+<li><p>$\mathbb{R}^4$上存在无穷多个互不等价的$C^\infty$结构;</p>
+</li>
+<li><p>$S^7$-Milnor怪球上存在28种互不等价的$C^\infty$结构;</p>
+</li>
+<li><p>维数$m\le 3$的拓扑流形上存在唯一的$C^\infty$结构;</p>
+</li>
+<li><p>$\,\forall\,m&gt;3,$ 都存在$m$维拓扑流形, 其上不存在$C^\infty$结构.</p>
+</li>
+</ul>
+<p>下面假设拓扑流形都给定了$C^\infty$结构.</p>
+<h2 id="切空间"><a href="#切空间" class="headerlink" title="切空间"></a>切空间</h2><p>给定光滑流形$M^m,$ 我们尝试<em>内蕴地</em>推广切向量, 切平面的概念.
+将曲线$C:(a,b)\rightarrow M^m$视为光滑流形间的映照,
+我们可以定义光滑曲线的概念. 设$C(t_0)=p,$
+用$C_p^\infty(M)$表示$M$上在$p$处光滑的函数全体,
+我们称映照(<em>方向导数算子</em>)$X:C_p^\infty(M)\rightarrow \mathbb{R},$
+$f\mapsto \frac{d}{dt}[f(c(t))]|_{t=t_0}$为$C(t)$在$p$处<strong>切向量</strong>,
+即求方向导数的运算过程蕴含了该方向本身.</p>
+<p>上述”切向量”$X$满足$X(af+bg)=aX(f)+bX(g),$
+$X(f\cdot g)=X(f)g(p)+f(p)X(g).$
+取$\widetilde{T}_pM=\{\widetilde{X}:C_p^\infty\rightarrow \mathbb{R}\text{满足(1),(2)}\}.$
+$(\widetilde{X}_1+\widetilde{X}_2)f:=\widetilde{X}_1(f)+\widetilde{X}_2(f),$
+$(x\widetilde{X})(f):=a\widetilde{X}(f).$
+容易验证$\widetilde{X}_1+\widetilde{X}_2,$
+$a\widetilde{X}$满足$(1),(2),$ 即$\widetilde{T}_pM$是向量空间.</p>
+<p>$C_p^\infty(M)$和$C^\infty(M)$不同, 后者为向量空间, 但前者不是,
+因为<em>零元并不唯一</em>. 原因是前者的加法仅在公共光滑邻域上做加法.
+因此$X$也暂时不是线性映射.</p>
+<p>我们引入等价关系来改变这一状况:
+记$f\sim g\Leftrightarrow \,\exists\,p$点小邻域$W,$ 使得$f|_W=g|_W.$
+称$[f]$为$C^\infty$<strong>函数芽</strong>,
+$C_p^\infty(M)/_\sim$为$C^\infty$<strong>函数芽空间</strong>$\mathcal{F}_p^\infty.$
+$X$可以诱导其上的映射,
+仍记为$X:\mathcal{F}_p^\infty\rightarrow \mathbb{R},$ $[f]\mapsto Xf.$
+它也满足类似前面$(1),(2)$的性质.
+此时$\mathcal{F}_p^\infty$确实是向量空间, 因此$X$成为线性映射.</p>
+<p>文章最后更新于 2021-09-26 16:39:45 </p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：《微分流形》第一章-流形间的映射</li>
+        <li>本文作者：DreamAR</li>
+        <li>创建时间：2021-09-26 16:39:38</li>
+        <li>
+            本文链接：https://dream0ar.github.io/2021/09/26/《微分流形》第一章-流形间的映射/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/10/08/%E3%80%8A%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2%E3%80%8B%E8%AE%A8%E8%AE%BA%E7%A8%BF-%E8%A7%A3%E6%9E%90%E6%B5%81%E5%BD%A2/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">《微分流形》讨论稿-解析流形</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/09/25/%E3%80%8A%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2%E3%80%8B%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2(2)/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">《微分流形》第一章-微分流形(2)</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div class="valine-container">
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script >
+            function loadValine() {
+                new Valine({
+                    el: '#vcomments',
+                    appId: '56D8XuBPhYU7FHTBxfIdzwej-gzGzoHsz',
+                    appKey: 'llErW21yrdS1MwbbpOjVkkLW',
+                    meta: ['nick', 'mail', 'link'],
+                    avatar: 'wavatar',
+                    enableQQ: true,
+                    placeholder: '欢迎交流讨论',
+                    lang: 'zh-CN'.toLowerCase()
+                });
+
+                function getAuthor(language) {
+                    switch (language) {
+                        case 'en':
+                            return 'Author';
+                        case 'zh-CN':
+                            return '博主';
+                        default:
+                            return 'Master';
+                    }
+                }
+
+                // Add "Author" identify
+                const getValineDomTimer = setInterval(() => {
+                    const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+                    if (vcards.length > 0) {
+                        let author = 'DreamAR';
+
+                        if (author) {
+                            for (let vcard of vcards) {
+                                const vnick_dom = vcard.querySelector('.vhead .vnick');
+                                const vnick = vnick_dom.innerHTML;
+                                if (vnick === author) {
+                                    vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                                }
+                            }
+                        }
+                        clearInterval(getValineDomTimer);
+                    } else {
+                        clearInterval(getValineDomTimer);
+                    }
+                }, 2000);
+            }
+
+            if ('false') {
+                const loadValineTimeout = setTimeout(() => {
+                    loadValine();
+                    clearTimeout(loadValineTimeout);
+                }, 1000);
+            } else {
+                window.addEventListener('DOMContentLoaded', loadValine);
+            }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>Wed Jul 14 2021 08:00:00 GMT+0800 (中国标准时间)</span>&nbsp;-&nbsp;
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">DreamAR</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+            <div class="icp-info info-item"><a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">京ICP备2022021488号-1</a></div>
+        
+        <div style="width:300px;margin:0 auto; padding:20px 0;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039835" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010802039835号</p></a>
+        </div>
+    
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%A0%E5%B0%84%E7%9A%84%E5%BE%AE%E5%88%86%E5%AD%A6"><span class="nav-text">映射的微分学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%98%A0%E5%B0%84"><span class="nav-text">映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%98%A0%E7%85%A7"><span class="nav-text">映照</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E5%88%86%E5%90%8C%E8%83%9A"><span class="nav-text">微分同胚</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E5%88%86%E7%BB%93%E6%9E%84%E9%97%AE%E9%A2%98"><span class="nav-text">微分结构问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E7%A9%BA%E9%97%B4"><span class="nav-text">切空间</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+		TeX: { 
+			equationNumbers: { autoNumber: "AMS" },
+			extensions: ["AMSmath.js", "AMSsymbols.js"]
+		},
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i) 
+			all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

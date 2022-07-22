@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="记录生活">
+    <meta name="author" content="DreamAR">
+    
+    <title>
+        
+            《微分流形》第六章-张量丛 |
+        
+        梦之居
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"dream0ar.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"记录生活"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                梦之居
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">《微分流形》第六章-张量丛</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">DreamAR</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-12-08 15:50:08
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%87%A0%E4%BD%95/">几何</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%87%A0%E4%BD%95/%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2/">微分流形</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="外代数"><a href="#外代数" class="headerlink" title="外代数"></a>外代数</h2><p><strong>推论 1</strong>. <em>若$r&gt;n,$ 则$\Lambda^r(V^\ast )=\{0\}.$ 若$0\le r\le n,$ 则$\dim \Lambda^r(V^\ast )=\binom{n}{r},$ 以$\{\omega^{i_1}\wedge\cdots\wedge \omega^{i_r}|1\le i_1&lt;\cdots&lt;i_r\le n\}$为基.</em> </p>
+<p><strong>证:</strong>
+$\,\forall\,\Phi\in \Lambda^r(V^\ast )\subset V^\ast \otimes \cdots\otimes V^\ast =\mathcal{L}(V,\cdots,V,\mathbb{R}),$
+$\Phi=\Phi_{i_1\cdots i_r}\omega^{i_1}\otimes\cdots\otimes\omega^{i_r}.$
+那么</p>
+<script type="math/tex; mode=display">\Phi=A(\Phi)=\frac{1}{r!}\Phi_{i_1\cdots i_r} \omega^{i_1}\wedge\cdots\wedge \omega^{i_n}=\sum_{1\le i_1<\cdots<i_r\le n}a_{i_1\cdots i_r}\omega^{i_1}\wedge\cdots\wedge \omega^{i_r}.</script><p>因此$r&gt;n$时, 求和集为空集, $\Phi\equiv 0.$ $0\le r\le n$时,
+只需证$\{\omega^{i_1}\wedge\cdots\wedge \omega^{i_r}|1\le i_1&lt;\cdots&lt;i_r\le n\}$线性无关.
+利用$\omega^{i_1}\wedge\cdots\wedge \omega^{i_r}(e_{i_1},\cdots,e_{i_r})=\det(\omega^{i_\alpha}e_{i_\beta})=1,$
+其它作用为$0$即可.</p>
+<p><strong>推论 2</strong>. <em>设$\{\theta^i\},\{\omega^i\}$是$V^\ast $两组基, $\theta^i=a^i_j\omega^j.$ 则$\theta^1\wedge\cdots\wedge \theta^n=\det(a^i_j)\omega^1\wedge\cdots\wedge\omega^n.$</em> </p>
+<p><strong>证:</strong> 取$\{\omega^i\}$的对偶基$\{e_i\},$
+往等式两侧作用$(e_1,\cdots,e_n)$即可.</p>
+<script type="math/tex; mode=display">\mathrm{LHS}=\det(\theta^ie_j)=\det(a^i_k\omega^ke_j)=\det(a^i_j)=\mathrm{RHS}.</script><p><strong>引理 3</strong> (Cartan引理). <em>设$\omega^i,\theta^i\in V^\ast ,$ $1\le i\le r\le \dim V.$ 设$\{\omega^i\}$线性无关, 则:</em> </p>
+<script type="math/tex; mode=display">\sum_{i=1}^r\omega^i\wedge \theta^i=0\,\Leftrightarrow\, \theta^i=\sum_{j=1}^ra_{ij}\omega^j,\quad a_{ij}=a_{ji}.</script><p><strong>证:</strong> 将$\{\omega^i\}$扩充为一组基. 那么$\theta^i=a_{ij}\omega^j,$
+$\omega^i\wedge\theta^i=a_{ij}\omega^i\wedge\omega^j.$ 这样,</p>
+<script type="math/tex; mode=display">\sum_{i=1}^r \omega^i\wedge\theta^i=\sum_{1\le i<j\le r}(a_{ij}-a_{ji})\omega^i\wedge\omega^j+\sum_{1\le i\le r<j}a_{ij}\omega^i\wedge\omega^j.</script><p>注意右侧为用$\Lambda^2(V^\ast )$的基来表示. 由此证得等价性.</p>
+<p><strong>定理 4</strong>. <em>设$\omega^1,\cdots,\omega^r\in V^\ast $线性无关, $\Phi\in \Lambda^s(V^\ast ),$ 则$\,\exists\,\psi^1,\cdots,\psi^r\in \Lambda^{s-1}(V^\ast ),$ 使$\Phi=\omega^1\wedge\psi^1+\cdots+\omega^r\wedge\psi^r$ $\Leftrightarrow$ $\omega^1\wedge\cdots\wedge \omega^r\wedge \Phi=0.$</em> </p>
+<p><strong>证:</strong> 只需证明充分性.
+设有$\omega^1\wedge\cdots\wedge\omega^r\wedge \Phi=0,$ 将$\Phi$用基表示,</p>
+<script type="math/tex; mode=display">\Phi=c_{i_1\cdots i_s}\omega^{i_1}\wedge\cdots\wedge\omega^{i_s}=\omega^1\wedge\psi^1+\cdots+\omega^r\wedge\psi^r+\sum_{r+1\le \alpha_1<\cdots<\alpha_s\le n}a_{\alpha_1\cdots\alpha_s}\omega^{\alpha_1}\wedge\cdots\wedge\omega^{\alpha_s}.</script><p>当$r+s&gt;n$时, 后侧求和集为空集; 当$r+s\le n$时, 利用条件,
+与$\omega^1\wedge\cdots\wedge\omega^r$做外积.
+由线性无关性即有后面的系数全为零.</p>
+<p><strong>命题 5</strong>. <em>设$f\in \mathcal{L}(V;W),$ $f^\ast :\Lambda^r(W^\ast )\rightarrow\Lambda^r(V^\ast )$为拉回映照, 则$f^\ast (\Phi\wedge\Psi)=f^\ast \Phi\wedge f^\ast \Psi.$</em> </p>
+<p><strong>证:</strong> 利用$f^\ast $与$A,\otimes$的交换性即可: </p>
+<script type="math/tex; mode=display">\begin{aligned}
+                f^*(\Phi\wedge\Psi)(x_1,\cdots,x_{r+s})&=(\Phi\wedge\Psi)(f(x_1),\cdots,f(x_{r+s}))\\
+                &=\frac{(r+s)!}{r!s!}A(\Phi\otimes \Psi) (f(x_1),\cdots,f(x_{r+s}))\\
+                &=\frac{(r+s)!}{r!s!}A(f^*(\Phi\otimes \Psi))(x_1,\cdots,x_{r+s})\\
+                &=f^*\Phi \wedge f^*\Psi (x_1,\cdots,x_{r+s}).
+            \end{aligned}</script><p>做形式直和$\Lambda(V^\ast )=\bigoplus_{r=0}^n \Lambda^r(V^\ast )=\{\omega_0+\cdots+\omega_n|\omega_r\in \Lambda^r(V^\ast )\}.$
+那么它成为$2^n$维向量空间, 并且以$\wedge$为满足分配律的乘法, 成为代数.
+称之为$V^\ast $上的<strong>外代数</strong>. 类似地,
+可以定义$\Lambda(V)=\bigoplus_{r=0}^n \Lambda^r(V),$
+称为$V$上<strong>外代数</strong>.</p>
+<h2 id="张量丛"><a href="#张量丛" class="headerlink" title="张量丛"></a>张量丛</h2><p>令$M^m$为$m$维$C^\infty$流形, $\,\forall\,p\in M,$ 有切空间$T_pM.$
+我们定义$(r,s)$-型张量空间$T_s^r(p)=T_pM\otimes\cdots\otimes T_pM\otimes T_p^\ast M\otimes\cdots\otimes T_p^\ast M.$
+$\dim T_s^r(p)=m^{r+s}.$ 定义丛空间$T_s^r(M)=\bigcup_{p\in M}T_s^r(p),$
+可赋予自然拓扑与微分结构, 使之成为$m+m^{r+s}$维$C^\infty$流形.</p>
+<p>$T_s^r(q)$有自然基$\{\frac{\partial {} }{\partial {}x^{i_1} }\otimes\cdots\otimes\frac{\partial {} }{\partial {}x^{i_r} }\otimes dx^{j_1}\otimes \cdots\otimes dx^{j_s}|1\le i_1,\cdots,i_r,j_1,\cdots,j_s\le n\}.$
+$\Phi\in T_s^r$有坐标$(\Phi^{i_1\cdots i_r}_{j_1\cdots j_s}).$
+取$\pi:T_s^r(M)\rightarrow M$为自然投影,
+$\Psi:\pi^{-1}(U)\rightarrow U\times \mathbb{R}^N$将$\Phi$映至$(q,(\Phi^{i_1\cdots i_r}_{j_1\cdots j_s})).$
+那么定义</p>
+<script type="math/tex; mode=display">\widetilde{\Psi}=(\varphi\times \mathrm{id}_{\mathbb{R}^N})\circ \Psi:\pi^{-1}(U)\rightarrow U\times \mathbb{R}^N\rightarrow \varphi(U)\times \mathbb{R}^N\subset \mathbb{R}^{m+N}.</script><p>赋予$T_s^r(M)$的拓扑使$\pi^{-1}(U)$是$T_s^r(M)$的开子集且$\widetilde{\Psi}$为同胚.
+若$\{(U_\alpha,\varphi_\alpha)\}$为$M$的光滑坐标图册,
+则$\{(\pi^{-1}(U_\alpha),\widetilde{\Psi}_\alpha)\}$为$T_s^r(M)$的光滑坐标图册.</p>
+<p>它满足如下性质, $\pi:T_s^r(M)\rightarrow M$为$C^\infty$满射,
+$\pi^{-1}(q)=T_s^r(q)$为$m^{r+s}$维向量空间,
+$\Psi:\pi^{-1}(U)\rightarrow U\times \mathbb{R}^N$为$C^\infty$映照,
+$\pi_1\circ \Psi=\pi,$ 并且$\Psi|_q$为线性同构.
+这些要素使其成为<strong>向量丛</strong>, 称其为<strong>张量丛</strong>.</p>
+<h2 id="张量场"><a href="#张量场" class="headerlink" title="张量场"></a>张量场</h2><p>若有$\Phi:M\rightarrow T_s^r(M),$ 满足$\pi\circ\Phi=\mathrm{id}_M,$
+则称$\Phi$为$M$上$(r,s)$-型<strong>张量场</strong>. 当$\Phi$为光滑映照时,
+称其为光滑$(r,s)$-型<strong>张量场</strong>. 这当且仅当$\Phi$的每个分量为光滑函数.</p>
+<p>$\Phi\in T_s^r(p)=\mathcal{L}(T_p^\ast M,\cdots,T_p^\ast M,T_pM,\cdots,T_pM;\mathbb{R})$可视为$(r+s)$-重线性函数.
+考虑$(0,s)$-型张量场$\Phi.$ 任取$X_1,\cdots,X_s\in \mathfrak{X}(M),$
+定义张量场在向量场上的作用:</p>
+<script type="math/tex; mode=display">[\Phi(X_1,\cdots,X_s)] (p):=\Phi(p)(X_1(p),\cdots,X_s(p)),</script><p>那么$\Phi(X_1,\cdots,X_s)\in C^\infty(M).$ 因为各个分量为光滑函数,
+做线性组合或相乘后仍是光滑函数.</p>
+<p>由于张量是多重线性函数, 任取$f_1,\cdots,f_s\in C^\infty(M),$
+逐点考虑得到</p>
+<script type="math/tex; mode=display">\Phi(f_1X_1,\cdots,f_sX_s)=f_1\cdots f_s\Phi(X_1,\cdots,X_s)\in C^\infty(M).</script><p>反过来,
+若有映照$\Phi:\mathfrak{X}(M)\times \cdots\times \mathfrak{X}(M)\rightarrow C^\infty(M)$是$C^\infty(M)$线性的,
+则$\Phi$必是$(0,s)$-型$C^\infty$-张量场.</p>
+<p>一般地, 记$\Gamma(T_s^r(M))$表示$C^\infty$的$(r,s)$-型张量场全体,
+则它是无穷维向量空间, $f\Phi+g\Psi(p):=f(p)\Phi(p)+g(p)\Psi(p).$
+类似前面, 它作用在余切向量场与向量场的组合上,
+并且也是$C^\infty(M)$线性的. 反过来也对.</p>
+<h2 id="外微分形式"><a href="#外微分形式" class="headerlink" title="外微分形式"></a>外微分形式</h2><p>$M^m$为$C^\infty$-流形.
+令$\Lambda^r(T^\ast M)=\bigcup_{p\in M}\Lambda^r(T_p^\ast M),$ 类似地,
+赋予其自然拓扑结构与微分结构使其成为$m+\binom{m}{r}$维$C^\infty$流形,
+称为$M$上$r$-次<strong>外形式丛</strong>.</p>
+<p>若$\Phi:M\rightarrow \Lambda^rT^\ast M$是光滑映照,
+$\pi\circ\Phi=\mathrm{id}_M,$ 则称$\Phi$是$r$-次<strong>外微分形式</strong>.
+这当且仅当它的各个分量是光滑函数.
+令$\mathcal{A}^r(M)=\Gamma(\Lambda^rT^\ast M)$为$r$-次外微分形式全体,
+为无穷维向量空间. 类似地,
+也可以定义$f\omega_1+g\omega_2\in \mathcal{A}^r(M).$</p>
+<p>由于我们在$\Lambda^r T^\ast M$上有乘法$\wedge,$
+我们可以逐点定义$\wedge:\mathcal{A}^r(M)\times \mathcal{A}^s(M)\rightarrow \mathcal{A}^{r+s}(M).$
+即</p>
+<script type="math/tex; mode=display">(\omega\wedge\sigma)(p)=\omega(p)\wedge \sigma(p)\in \Lambda^{r+s}(T_p^\ast M).</script><p>它当然同样满足分配律, 反交换律与结合律.</p>
+<p>设$F:M\rightarrow N$为光滑映照,
+则${F_{\ast } }_p:T_pM\rightarrow T_{F(p)}N$为切映照,
+$F^\ast :T^\ast _{F(p)}N\rightarrow T_p^\ast (M)$为拉回映照,
+诱导到$\Lambda^r T_q^\ast N\rightarrow \Lambda^r T_p^\ast M$上,
+再诱导了$\mathcal{A}^r(N)\rightarrow \mathcal{A}^r(M)$上的拉回,
+满足$F^\ast (\omega\wedge\sigma)=F^\ast \omega\wedge F^\ast \sigma.$</p>
+<p>文章最后更新于 2021-12-08 15:50:09 </p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：《微分流形》第六章-张量丛</li>
+        <li>本文作者：DreamAR</li>
+        <li>创建时间：2021-12-08 15:50:08</li>
+        <li>
+            本文链接：https://dream0ar.github.io/2021/12/08/《微分流形》第六章-张量丛/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/12/12/%E3%80%8A%E7%8E%B0%E4%BB%A3PDE%E5%9F%BA%E7%A1%80%E3%80%8B%E7%AC%94%E8%AE%B0(9)-%E4%BC%BD%E8%BE%BD%E9%87%91(Galerkin)%E6%96%B9%E6%B3%95/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">《现代PDE基础》笔记(9)-伽辽金(Galerkin)方法</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/12/07/%E9%97%AD%E5%80%BC%E5%9F%9F%E5%AE%9A%E7%90%86/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">闭值域定理</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div class="valine-container">
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script >
+            function loadValine() {
+                new Valine({
+                    el: '#vcomments',
+                    appId: '56D8XuBPhYU7FHTBxfIdzwej-gzGzoHsz',
+                    appKey: 'llErW21yrdS1MwbbpOjVkkLW',
+                    meta: ['nick', 'mail', 'link'],
+                    avatar: 'wavatar',
+                    enableQQ: true,
+                    placeholder: '欢迎交流讨论',
+                    lang: 'zh-CN'.toLowerCase()
+                });
+
+                function getAuthor(language) {
+                    switch (language) {
+                        case 'en':
+                            return 'Author';
+                        case 'zh-CN':
+                            return '博主';
+                        default:
+                            return 'Master';
+                    }
+                }
+
+                // Add "Author" identify
+                const getValineDomTimer = setInterval(() => {
+                    const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+                    if (vcards.length > 0) {
+                        let author = 'DreamAR';
+
+                        if (author) {
+                            for (let vcard of vcards) {
+                                const vnick_dom = vcard.querySelector('.vhead .vnick');
+                                const vnick = vnick_dom.innerHTML;
+                                if (vnick === author) {
+                                    vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                                }
+                            }
+                        }
+                        clearInterval(getValineDomTimer);
+                    } else {
+                        clearInterval(getValineDomTimer);
+                    }
+                }, 2000);
+            }
+
+            if ('false') {
+                const loadValineTimeout = setTimeout(() => {
+                    loadValine();
+                    clearTimeout(loadValineTimeout);
+                }, 1000);
+            } else {
+                window.addEventListener('DOMContentLoaded', loadValine);
+            }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>Wed Jul 14 2021 08:00:00 GMT+0800 (中国标准时间)</span>&nbsp;-&nbsp;
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">DreamAR</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+            <div class="icp-info info-item"><a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">京ICP备2022021488号-1</a></div>
+        
+        <div style="width:300px;margin:0 auto; padding:20px 0;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039835" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010802039835号</p></a>
+        </div>
+    
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E4%BB%A3%E6%95%B0"><span class="nav-text">外代数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%A0%E9%87%8F%E4%B8%9B"><span class="nav-text">张量丛</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%A0%E9%87%8F%E5%9C%BA"><span class="nav-text">张量场</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E5%BE%AE%E5%88%86%E5%BD%A2%E5%BC%8F"><span class="nav-text">外微分形式</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+		TeX: { 
+			equationNumbers: { autoNumber: "AMS" },
+			extensions: ["AMSmath.js", "AMSsymbols.js"]
+		},
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i) 
+			all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>

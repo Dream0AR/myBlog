@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="记录生活">
+    <meta name="author" content="DreamAR">
+    
+    <title>
+        
+            《微分流形》第四章-Frobenius定理 |
+        
+        梦之居
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"dream0ar.github.io","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"记录生活"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                梦之居
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">《微分流形》第四章-Frobenius定理</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">DreamAR</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-11-10 16:15:52
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%87%A0%E4%BD%95/">几何</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%AC%94%E8%AE%B0/%E5%87%A0%E4%BD%95/%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2/">微分流形</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="对合性"><a href="#对合性" class="headerlink" title="对合性"></a>对合性</h2><p><strong>命题 1.1</strong>. <em>设$\mathcal{D}$是$M$上光滑分布. 若$\mathcal{D}$是可积的, 则$\,\forall\,X,Y\in \chi(\mathcal{D}),$ 即$\,\forall\,p\in M,$ $X_p,Y_p\in \mathcal{D}_p,$ 那么$[X,Y]\in \chi(\mathcal{D}).$</em> </p>
+<p><strong>证:</strong> 任取含$p$坐标系$(U,\varphi;x^i),$
+要证$[X,Y]_p\in \mathcal{D}_p.$
+由可积性过$p$点存在积分子流形$i:N^k\hookrightarrow M,$ 局部来看由秩定理,
+可以视其为切片. 从而$X,Y$只在前$k$个自然基上有光滑分量. 计算得到,
+$[X,Y]$同样只在前$k$个自然基上有光滑分量,
+因此$[X,Y]\in \chi(\mathcal{D}).$</p>
+<p><strong>注 1.2</strong>. <em>可以证明, 若$X_1,X_2$与$Y_1,Y_2$是$F$相关的, 即$F_\ast X_i=Y_i,$ 则$[X_1,X_2],[Y_1,Y_2]$也是$F$相关的. 由此可以证明在题设下, $[X|_N,Y|_N]$与$[X,Y]$是$i$相关的, 即$i_\ast [X|_N,Y|_N]=[X,Y],$ 从而$[X|_N,Y|_N]=[X,Y]|_N.$</em> </p>
+<p><strong>定义 1.3</strong>. <em>设$\mathcal{D}$是$M$上光滑分布, 若$\,\forall\,X,Y\in \chi(\mathcal{D}),$ $[X,Y]\in \chi(D),$ 则称$\mathcal{D}$是<strong>对合</strong>的.</em> </p>
+<p>由前面的命题, 可积性$\Rightarrow$对合性. 事实上欲证对合性,
+只需说明$\,\forall\,\mathcal{D}$的局部标架场$X_1,\cdots,X_k,$
+$[X_i,X_j]\in \chi(\mathcal{D}),$ $\,\forall\,1\le i,j\le k.$
+利用标架性质即可说明此时满足对合性的原始条件. 从而这两个条件是等价的.</p>
+<h2 id="Frobenius定理"><a href="#Frobenius定理" class="headerlink" title="Frobenius定理"></a>Frobenius定理</h2><p><strong>定理 1.4</strong> (Frobenius). <em>设$\mathcal{D}$是$M^m$上$k$维分布. 如果$\mathcal{D}$是对合的, 那么$\,\forall\,p\in M,$ $\,\exists\,$含$p$坐标系$(U,\varphi;x^i)$使得$k$维切片都是$\mathcal{D}$的积分子流形.</em> </p>
+<p><strong>证:</strong> $k=1$时, 由Flow box定理, 每点局部都有坐标系,
+使得任意$x^1$-曲线为$X$的积分曲线,
+即$1$维切片都是$\mathcal{D}$的$1$维积分子流形.</p>
+<p>归纳地, 若命题对$k-1$维分布成立,
+那么设$\mathcal{D}$是$M$上对合的$k$维分布,
+取局部标架场$X_1,\cdots, X_k,$ 那么由对合性,</p>
+<script type="math/tex; mode=display">[X_i,X_j]\equiv 0 \mod \{X_1,\cdots,X_k\}.</script><p>由Flow box定理,
+可以取到坐标系使得$X_k=\frac{\partial {} }{\partial {}y_k},$
+那么对$1\le \lambda,\mu,\nu\le k-1,$
+令$X_\lambda’=X_\lambda-X_\lambda(y^k)X_k,$ 则$X_{\lambda}’(y_k)=0,$
+$X_k(y_k)=1,$
+从而$\mathcal{D}=\operatorname{span}\{X_1’,\cdots,X_{k-1}’,X_k\},$
+仍是局部标架场.</p>
+<p>计算得到,
+光是$k-1$维分布$\mathcal{D}’:=\operatorname{span}\{X_1’,\cdots,X_{k-1}’\}$就满足对合性.
+此时由归纳假设, $\mathcal{D}’$是可积分布,
+有坐标系$(V,\psi;z^i)$使得$k-1$维切片都是$\mathcal{D}’$的积分子流形.
+此时$\frac{\partial {}y^k}{\partial {}z^\lambda}=0,$
+$\,\forall\,1\le \lambda\le k-1.$
+$\mathcal{D}=\operatorname{span}\{\frac{\partial {} }{\partial {}z^1},\cdots,\frac{\partial {} }{\partial {}z^{k-1} },X_k\}.$</p>
+<p>作用$y^k,$
+计算得到$[\frac{\partial {} }{\partial {}z^\lambda},X_k]\equiv 0\mod \{\frac{\partial {} }{\partial {}z^1}\cdots\frac{\partial {} }{\partial {}z^{k-1} }\}.$
+将$X_k$表示为$\sum_{A=1}^m \xi^A \frac{\partial {} }{\partial {}z^A},$
+那么由前面的式子,
+$\sum_{A=k}^m\frac{\partial {}\xi^A}{\partial {}z^\lambda}\frac{\partial {} }{\partial {}z^A}=0,$
+这就说明$\xi^A=\xi^A(z^k,\cdots,z^m),$ $\,\forall\,A\ge k.$
+令$X_k’=X_k-\sum_{\lambda=1}^{k-1}\xi^\lambda\frac{\partial {} }{\partial {}z^\lambda},$
+只保留后面的分量. 由Flowbox定理,
+可以取到新坐标系使得$X’_{k}=\frac{\partial {} }{\partial {}x^k},$
+满足$x^\lambda=z^\lambda,$ $1\le \lambda\le k-1.$ 即前$k-1$个坐标不变.
+那么此时即有$\mathcal{D}=\operatorname{span}\{\frac{\partial {} }{\partial {}x^1},\cdots,\frac{\partial {} }{\partial {}x^{k} }\},$
+$k$维切片都是积分子流形.</p>
+<h2 id="单位分解"><a href="#单位分解" class="headerlink" title="单位分解"></a>单位分解</h2><p><strong>定理 1.5</strong>. <em>设光滑流形$M^m$上有紧集$\overline{V}\subset U,$ 那么存在$f\in C_c^\infty(M),$ 使得$f\in[0,1],$ $f|_V\equiv 1,$ $f|_{M\setminus U}\equiv 0.$</em> </p>
+<ul>
+<li><p>设$M$是拓扑空间, $\{A_\alpha\}$是$M$的一族子集.
+如$\bigcup_{\alpha}A_\alpha=M,$
+则称$\{A_\alpha\}$为$M$的一个<strong>覆盖</strong>.</p>
+</li>
+<li><p>设$\{A_\alpha\}$是$M$的覆盖, 如果$\,\forall\,p\in M,$
+存在$U\ni p$使得$U$只与有限个$A_\alpha$相交,
+则称$\{A_\alpha\}$是$M$的<strong>局部有限</strong>的覆盖.</p>
+</li>
+<li><p>设$\{U_\alpha\},$ $\{V_\beta\}$是$M$的两个覆盖.
+若$\,\forall\,\beta,$
+$\,\exists\,\alpha$使得$V_\beta\subset U_\alpha,$
+则称$\{V_\beta\}$是$\{U_\alpha\}$的<strong>加细</strong>.</p>
+</li>
+</ul>
+<p><strong>定义 1.6</strong>. <em>$M$是拓扑空间, 若$M$的任意开覆盖$\{U_\alpha\}$有局部有限的加细, 则称$M$是<strong>仿紧</strong>的.</em> </p>
+<p>现设$M$是$m$维$C^\infty$流形, $\{A_\alpha\}$是$M$的开覆盖.
+由第二可数公理, $\{A_\alpha\}$存在可数加细$\{U_j\},$
+且每个开集都是坐标图$(U_j,\varphi_j).$ 坐标图可进一步改造为局部有限的,
+且$\varphi_j(U_j)=B_1^m(0),$
+$\{V_j=\varphi_j^{-1}(B_{1/2}^m(0))\}$也是$M$的开覆盖.</p>
+<p><strong>定义 1.7</strong>. <em>设$M$为光滑流形. 若$\{f_i\}\in C^\infty(M)$满足$f_i\in [0,1],$ $\sum_i f_i\equiv 1,$ 且$\{\operatorname{supp}f_i\}$是$M$的局部有限的覆盖, 那么称$\{f_i\}$为$M$的<strong>单位分解</strong>.</em> </p>
+<p><strong>定理 1.8</strong> (单位分解). <em>设$M^m$为光滑流形, 则存在单位分解$\{f_i\}.$</em> </p>
+<p><strong>证:</strong> $\,\forall\,\bigcup_\alpha A_\alpha\supset M,$ 由上述引理,
+存在局部有限加细$\{(U_i,\varphi_i)\},$ $\varphi_i(U_i)=B_1^m(0).$ 进而
+$\,\exists\,\{\widetilde{f}_i\}\in C_c^\infty(U_i),$
+$\widetilde{f}_i\in[0,1],$ $\widetilde{f}_i|_{V_i}\equiv 1.$
+最后取$f_i=\frac{\widetilde{f}_i}{\sum_i \widetilde{f}_i}$即可.</p>
+<p>事实上有$\operatorname{supp}f_i\subset U_i\subset A_\alpha,$
+称$\{f_i\}$是<strong>从属</strong>于$\{A_\alpha\}$的单位分解.
+因此任意开覆盖有从属于之的单位分解.</p>
+<p>文章最后更新于 2021-11-10 16:15:52 </p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：《微分流形》第四章-Frobenius定理</li>
+        <li>本文作者：DreamAR</li>
+        <li>创建时间：2021-11-10 16:15:52</li>
+        <li>
+            本文链接：https://dream0ar.github.io/2021/11/10/《微分流形》第四章-Frobenius定理/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/11/13/%E3%80%8A%E7%8E%B0%E4%BB%A3PDE%E5%9F%BA%E7%A1%80%E3%80%8B%E7%AC%94%E8%AE%B0(6)-%E5%AE%9E%E6%8C%87%E6%95%B0Sobolev%E6%A8%A1/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">《现代PDE基础》笔记(6)-实指数Sobolev模</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/11/03/%E3%80%8A%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2%E3%80%8B%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%88%86%E5%B8%83/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">《微分流形》第四章-分布</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+    <div class="valine-container">
+        <script 
+                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
+        <div id="vcomments"></div>
+        <script >
+            function loadValine() {
+                new Valine({
+                    el: '#vcomments',
+                    appId: '56D8XuBPhYU7FHTBxfIdzwej-gzGzoHsz',
+                    appKey: 'llErW21yrdS1MwbbpOjVkkLW',
+                    meta: ['nick', 'mail', 'link'],
+                    avatar: 'wavatar',
+                    enableQQ: true,
+                    placeholder: '欢迎交流讨论',
+                    lang: 'zh-CN'.toLowerCase()
+                });
+
+                function getAuthor(language) {
+                    switch (language) {
+                        case 'en':
+                            return 'Author';
+                        case 'zh-CN':
+                            return '博主';
+                        default:
+                            return 'Master';
+                    }
+                }
+
+                // Add "Author" identify
+                const getValineDomTimer = setInterval(() => {
+                    const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+                    if (vcards.length > 0) {
+                        let author = 'DreamAR';
+
+                        if (author) {
+                            for (let vcard of vcards) {
+                                const vnick_dom = vcard.querySelector('.vhead .vnick');
+                                const vnick = vnick_dom.innerHTML;
+                                if (vnick === author) {
+                                    vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
+                                }
+                            }
+                        }
+                        clearInterval(getValineDomTimer);
+                    } else {
+                        clearInterval(getValineDomTimer);
+                    }
+                }, 2000);
+            }
+
+            if ('false') {
+                const loadValineTimeout = setTimeout(() => {
+                    loadValine();
+                    clearTimeout(loadValineTimeout);
+                }, 1000);
+            } else {
+                window.addEventListener('DOMContentLoaded', loadValine);
+            }
+        </script>
+    </div>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>Wed Jul 14 2021 08:00:00 GMT+0800 (中国标准时间)</span>&nbsp;-&nbsp;
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">DreamAR</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+            <div class="icp-info info-item"><a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn">京ICP备2022021488号-1</a></div>
+        
+        <div style="width:300px;margin:0 auto; padding:20px 0;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802039835" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010802039835号</p></a>
+        </div>
+    
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%B9%E5%90%88%E6%80%A7"><span class="nav-text">对合性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Frobenius%E5%AE%9A%E7%90%86"><span class="nav-text">Frobenius定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E4%BD%8D%E5%88%86%E8%A7%A3"><span class="nav-text">单位分解</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+		TeX: { 
+			equationNumbers: { autoNumber: "AMS" },
+			extensions: ["AMSmath.js", "AMSsymbols.js"]
+		},
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i) 
+			all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
