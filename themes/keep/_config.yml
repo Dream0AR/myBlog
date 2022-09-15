@@ -232,7 +232,7 @@ pjax:
 # ---------------------------------------------------------------------------------------
 footer:
   since: 2021-07-14     # the starting year of your website, Can be null
-  icp: 京ICP备2022021488号-1    # ICP record number of your website, Can be null
+  icp:                  # ICP record number of your website, Can be null
 
 
 # ---------------------------------------------------------------------------------------
