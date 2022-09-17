@@ -1,4 +1,5 @@
 @echo off
+git pull
 echo git add .
 git add .
 
