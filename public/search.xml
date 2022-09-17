@@ -8254,4 +8254,62 @@ $u-1$在$\Sigma$上具有限能量, 取$\varphi=u.$ 由$R_M&gt;0,$</p>
         <category>黎曼几何</category>
       </categories>
   </entry>
+  <entry>
+    <title>《几何分析》笔记(2)-Hausdorff维数的分析应用</title>
+    <url>/2022/09/17/%E3%80%8A%E5%87%A0%E4%BD%95%E5%88%86%E6%9E%90%E3%80%8B%E7%AC%94%E8%AE%B0(2)-Hausdorff%E7%BB%B4%E6%95%B0%E7%9A%84%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>对完备流形$(M,g),$ 紧集$E,$ $\dim_\mathcal{H}E=p.$
+那么$\,\forall\,p’&gt;p,$ $\,\forall\,\varepsilon,\delta&gt;0,$
+$\,\exists\,(x_i,r_i&lt;\delta),$
+有限并$\bigcup \overline{B}_{r_i}(x_i)\supset E,$
+使得$\sum \omega(p’)r_i^{p’}&lt;\varepsilon.$
+令$\eta\in C^\infty(\mathbb{R}),$ 使得 </p>
+<script type="math/tex; mode=display">
+\eta=
+ \left\{\begin{aligned}
+ &1,&&t<1\\
+ &\in[0,1],&&t\in [1,2]\\
+ &0,&&t>2.
+ \end{aligned}\right.</script><p> 我们给出接下来的定义与性质:</p>
+<script type="math/tex; mode=display">
+\eta_i(x)=\eta\left(\frac{d(x,x_i)}{r_i}\right)\in \mathscr{D}(M),\quad \eta_i|_{B^g_{r_i}(x_i)}=1,\quad \eta_i|_{B^g_{2r_i}(x_i)^c}=0.</script><p>计算发现它的梯度满足如下性质:</p>
+<script type="math/tex; mode=display">
+|\nabla_g\eta_i|=|\eta'|\left|\frac{\nabla_g d(x,x_i)}{r_i}\right|<\frac{C}{r_i}.</script><script type="math/tex; mode=display">
+\int_M |\nabla_g\eta_i|^{n-p'}dV_g\le \frac{C}{r_i^{n-p'} }\mathrm{vol}(B_{2r_i}^g(x_i))\le Cr_i^{p'}.</script><p>接下来, 定义 </p>
+<script type="math/tex; mode=display">
+\phi=\max\{\eta_i\}\in C^p(M)\cap W^{1,n-p'}(M),</script><p>那么由先前的条件与结论, </p>
+<script type="math/tex; mode=display">
+\int_M|\nabla \phi|^{n-p'}\le C\varepsilon,</script><script type="math/tex; mode=display">
+\,\exists\,U\subset B_{2r_i}^g(E), \quad \phi|_U\equiv 1,\quad \phi|_{\left(B_{2r_i}^g(E)\right)^c}=0.</script><p>简单起见, 定义$r=d(\partial U,E),$ 那么$\phi|_{B_r^g(E)}\equiv 1.$
+因此随着$\varepsilon,\delta$改变,
+我们可以说明$\,\exists\,\phi_k,\delta_k,r_k,$ 使得:</p>
+<ol>
+<li><p>$r_k&lt;\delta_k\rightarrow 0,$</p>
+</li>
+<li><p>$\operatorname{supp}\phi_k\subset B_{\delta_k}^g(E),$
+$\phi|_{B_{r_k}^g(E)}=1,$</p>
+</li>
+<li><p>$\phi_k\in C^0(M)\cap W^{1,n-p’}(M),$
+$\int_M|\nabla_g\phi_k|^{n-p’}dV_g\rightarrow 0.$
+由逼近可设$\phi_k\in \mathscr{D}(M).$</p>
+</li>
+</ol>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>设$\Omega$为$M$中的有界区域, $\partial\Omega=\Gamma_1\cup \Gamma_2,$
+其中$\Gamma_1$维数小于$n-1$且为紧集, $\Gamma_2$是$n-1$维的,
+且$\mathcal{H}^{n-1}(\Gamma_2)&lt;+\infty.$
+我们来证明对于$M$上光滑向量场$X,$</p>
+<script type="math/tex; mode=display">
+\int_\Omega \operatorname{div}X=\int_{\Gamma_2} X\cdot n.</script><p>任取$p’\in (p,n-1),$ 令$E=\Gamma_1,$ $\,\exists\,\phi_k$如前所述,
+通过将坏点挖去, 我们有:</p>
+<script type="math/tex; mode=display">
+\int_M\operatorname{div}(1-\phi_k)X=\int_{\Gamma_2}(1-\phi_k)X\cdot n.</script><p>而由$\phi_k$性质与Hausdorff维数性质, 我们知道,</p>
+<script type="math/tex; mode=display">
+\int_\Omega \nabla \phi_k \cdot X\rightarrow 0,\quad \int_\Omega \phi_k \operatorname{div}X\rightarrow 0,\quad \int_\Omega \phi_kX\cdot n\rightarrow 0.</script><p>这就得到了前面的结论.</p>
+<p>文章最后更新于 2022-09-17 22:53:07 </p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>几何</category>
+        <category>几何分析</category>
+      </categories>
+  </entry>
 </search>
