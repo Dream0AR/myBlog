@@ -8655,4 +8655,171 @@ $\partial B_r^g(p)$与$N_p$横截相交. 此时$\partial B_r^g(p)$是分段光�
         <category>几何分析</category>
       </categories>
   </entry>
+  <entry>
+    <title>《几何分析》笔记(5)-Ricci比较定理</title>
+    <url>/2022/09/26/%E3%80%8A%E5%87%A0%E4%BD%95%E5%88%86%E6%9E%90%E3%80%8B%E7%AC%94%E8%AE%B0(5)-Ricci%E6%AF%94%E8%BE%83%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>令$M_k$为$n$维单连通黎曼流形, 截面曲率恒为$k,$ 即空间形式.
+令$V_k(r)$为半径为$r$的球的体积, $S_k(r)$为其球面面积. 记</p>
+<script type="math/tex; mode=display">
+g=dr^2+sn_k^2(r)g_{S_{n-1} }</script><script type="math/tex; mode=display">
+sn_k(r)=\left\{
+ \begin{aligned}
+ &\frac{\sin\sqrt{k}r}{\sqrt{k} },&&k>0\\
+ &r,&&k=0\\
+ &\frac{\sin\sqrt{-k}r}{\sqrt{-k} },&&k<0
+ \end{aligned}\right.</script><p> $sn_k(r)$是方程$f’’+kf=0,$ $f(0)=0,$
+$f’(0)=1$的解. 记$r(x)=d(x,p),$ 那么</p>
+<script type="math/tex; mode=display">
+\Delta r(x)=(n-1)\frac{sn_k'(r)}{sn_k(r)}.</script><script type="math/tex; mode=display">
+dV_g=sn_k^{n-1}dr_ndS^{n-1}.</script><p>取$M$为$\operatorname{Ric}\ge (n-1)K$的流形, 那么对于其上的$r(x),$</p>
+<script type="math/tex; mode=display">
+\Delta r_k\ge \Delta r,\quad sn_{k}^{n-1}(r)\ge \Theta(r,\theta).</script><p>一些结论是, $r(x)\in W_{loc}^{1,p}\cap C^0,$ $\,\forall\,p.$
+这就是Ricci比较定理. 由Bishop在$S_p$上给出了证明.
+Gromov将其推广到整体上, 统称Bishop-Gromov定理.
+它在证明Gromov-Hausdorff定理中起到了重要的作用.</p>
+<p><strong>引理 1</strong>. <em>记$\omega$为体积形式, $r=d(x,p).$ 那么,</em> </p>
+<script type="math/tex; mode=display">
+L_{\partial r}\omega=\Delta r\omega,\quad \frac{\partial {}\Theta}{\partial {}r}=\Delta r\Theta,\quad x\in S_p.</script><p>取平行标准正交基$\{e_i\},$ $\nabla_ie_j=0.$ $\{\theta_i\}$为对偶基. 那么</p>
+<script type="math/tex; mode=display">
+\omega=\theta^1\wedge\cdots\wedge\theta^n.</script><script type="math/tex; mode=display">
+L_{\partial_r}\omega=(L_{\partial_r}\theta^1)\wedge\theta^2\wedge\cdots\wedge \theta^n+\cdots+\theta^1\wedge\cdots\wedge \theta^{n-1}\wedge (L_{\partial_r}\theta^n).</script><script type="math/tex; mode=display">
+\begin{aligned}
+ (L_{\partial_r}\theta^i)(X)=&\frac{\partial {}\theta^i(X)}{\partial {}r}-\theta^i(L_{\partial_r}X)\\
+ =&\frac{\partial {}\theta^i(X)}{\partial {}r}-\theta^i(\nabla_{\partial_r}X)+\theta^i(\nabla_X\partial_r)\\
+ =&(\nabla_{\partial_r}\theta^i)(X)+\theta^i(\nabla_X\partial_r)\\
+ =&\theta^i(\nabla_X\partial_r)
+ \end{aligned}</script><p>从而,</p>
+<script type="math/tex; mode=display">
+L_{\partial_r}\theta^i=\theta^i(\nabla_{e_k}\partial_r)\theta^k.</script><script type="math/tex; mode=display">
+L_{\partial_r}\omega=\theta^k(\nabla_{e_k}\partial_r)\omega=\operatorname{tr}(Hess_r)\omega=\Delta r\omega.</script><script type="math/tex; mode=display">
+\begin{aligned}
+ Hess_f(X,Y)&=XY(f)-d_f(\nabla_XY)\\
+ &=X\left<{}Y,\nabla_gf\right>-\left<{}\nabla_gf,\nabla_XY\right>\\
+ &=\left<{}Y,\nabla_X\nabla_gf\right>.
+ \end{aligned}</script><p> 那么对于体积元,</p>
+<script type="math/tex; mode=display">
+\omega=\Theta dr\wedge dS^{n-1},\quad \Delta r\omega=L_{\partial r}\omega=\frac{\partial {}\Theta}{\partial {}r}dr\wedge dS^{n-1}=\frac{\partial {}\Theta}{\partial {}r}\frac{\omega}{\Theta}.</script><h2 id="比较定理"><a href="#比较定理" class="headerlink" title="比较定理"></a>比较定理</h2><p>对于$r(x)=d(x,p)\in C^\infty(S_p\setminus\{p\}),$
+$|\nabla_gr(x)|^2\equiv 1.$ $\Delta_g|\nabla_gr|^2=0.$ 由Bochner公式,</p>
+<script type="math/tex; mode=display">
+2|Hess_f|^2+2\left<{}\nabla_g\Delta_g r,\nabla_g r\right>+2\operatorname{Ric}(\nabla_gr,\nabla_gr)=0,</script><script type="math/tex; mode=display">
+\frac{\partial {}\Delta r}{\partial {}r}+|Hess_r|^2=-\operatorname{Ric}(\partial_r,\partial_r),</script><p>由于</p>
+<script type="math/tex; mode=display">
+Hess_r(\partial_r,X)=\left<{}\nabla_{\partial_r}\partial_r,X\right>=0,\quad |Hess_r|^2\ge \frac{(\operatorname{tr}Hess_r)^2}{n-1}=\frac{(\Delta_gr)^2}{n-1}.</script><p>结合$\operatorname{Ric}\ge (n-1)K,$ 我们有:</p>
+<script type="math/tex; mode=display">
+\frac{\partial {}\Delta r}{\partial {}r}+\frac{(\Delta r)^2}{n-1}\le -(n-1)K.</script><p>记$f(r)=\Delta_gr,$ 则 </p>
+<script type="math/tex; mode=display">
+f'+\frac{f^2}{n-1}\le -(n-1)K.</script><p>考虑$r=0$附近的渐进形态. 记$r=|x|,$ 局部我们有: </p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+ \Delta_gr&=g^{ij}\left(\frac{\partial^2 {}r}{\partial {}x_i\partial {}x_j}-\Gamma_{ij}^k\frac{\partial {}r}{\partial {}x_k}\right)\\
+ &=\delta^{ij}\frac{\partial^2 {}r}{\partial {}x_i\partial {}x_j}+(g^{ij}-\delta^{ij})\frac{\partial^2 {}r}{\partial {}x_i\partial {}x_j}-\Gamma_{ij}^k\frac{\partial {}r}{\partial {}x_k}=\frac{1}{r}+O(r).
+ \end{aligned}</script><p>接下来我们分类讨论:</p>
+<h3 id="K-gt-0"><a href="#K-gt-0" class="headerlink" title="$K&gt;0$"></a>$K&gt;0$</h3><script type="math/tex; mode=display">
+f'\le -((n-1)K+\frac{f^2}{n-1}),\quad \frac{f'}{(n-1)^2K+f^2}\le -\frac{1}{n-1}.</script><p>两边积分, 利用$\arctan$即可得到,</p>
+<script type="math/tex; mode=display">
+f\le (n-1)\frac{\cos\sqrt{k}r}{\sin\sqrt{k}r}</script><h3 id="K-0"><a href="#K-0" class="headerlink" title="$K=0$"></a>$K=0$</h3><script type="math/tex; mode=display">
+f'+\frac{f^2}{n-1}\le 0,\quad f'\le 0.</script><p>取$T=\min\{t|f(t)=0\}\in (0,+\infty].$</p>
+<script type="math/tex; mode=display">
+f|_{[T,+\infty)}\le 0\quad\Rightarrow\quad f|_{[T,+\infty)}\le \frac{n-1}{r}=(n-1)\frac{sn_0'(r)}{sn_0(r)}.</script><p>所以只需分析$(0,T)$上的情况.</p>
+<script type="math/tex; mode=display">
+\frac{f'}{f^2}+\frac{1}{n-1}\le 0,\quad \left(\frac{1}{f}\right)'\ge \frac{1}{n-1},\quad \frac{1}{f(r)}\ge \frac{r-r_0}{n-1}+\frac{1}{f({r_0})}.</script><h3 id="K-lt-0"><a href="#K-lt-0" class="headerlink" title="$K&lt;0$"></a>$K&lt;0$</h3><script type="math/tex; mode=display">
+f'\le -(n-1)K-\frac{f^2}{n-1},\quad T=\min\{t|-(n-1)K-\frac{f^2}{n-1}=0\}.</script><p>那么 </p>
+<script type="math/tex; mode=display">
+-(n-1)K-\frac{f^2}{n-1}|_{(0,T)}< 0</script><p> 记</p>
+<script type="math/tex; mode=display">
+I=\{t|-(n-1)K-\frac{f^2}{n-1}< 0\}</script><p> 那么在$I$上,
+记$\varphi=(n-1)\frac{sn_k’(r)}{sn_k(r)},$ 使得有:</p>
+<script type="math/tex; mode=display">
+\frac{f'}{-(n-1)K-\frac{f^2}{n-1} }\ge 1=\frac{\varphi'}{-(n-1)K-\frac{\varphi^2}{n-1} }.</script><p>记$F’(t)=\frac{1}{-(n-1)K-\frac{t^2}{n-1} },$ 它在$I$上取负.
+那么$F$单调递减,</p>
+<script type="math/tex; mode=display">
+(F(f))'\ge (F(\varphi))',\quad \lim_{r\rightarrow 0}F(f)=\lim_{r\rightarrow 0}F(\varphi)\in (0,+\infty).</script><script type="math/tex; mode=display">
+F(f)\ge F(\varphi),\quad f\le \varphi,\quad in\,[0,T].</script><p>记$\alpha(r)=f(r)-\varphi(r).$ 设$\alpha(r_0)&gt;0.$
+定义$r_1=\max\{r| r&lt;r_0,\alpha(r)=0\}.$ 在$(r_1,r_0)$上,</p>
+<script type="math/tex; mode=display">
+-(n-1)K<\frac{\varphi^2}{n-1}<\varphi<f.</script><p>因此$-(n-1)K-\frac{f^2}{n-1}&lt;0,$ $(r_1,r_0)\subset I.$
+由同样的方法可以分析出其上有$f(r)\le \varphi(r),$ 矛盾.
+从而$\alpha(r)\le 0,$ 即$f\le \varphi.$</p>
+<p>综上, 我们证明了定理:</p>
+<p><strong>定理 2</strong>. <em>对$\operatorname{Ric}\ge (n-1)K$的完备黎曼流形$M,$ $\,\forall\,x\in S_p\setminus\{p\},$ 我们有:</em> </p>
+<script type="math/tex; mode=display">
+\Delta r(x)\le (n-1)\frac{sn_k'(r)}{sn_k(r)}.</script><p>文章最后更新于 2022-09-26 19:08:06 </p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>几何</category>
+        <category>几何分析</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>《几何分析》笔记(6)-体积比较定理</title>
+    <url>/2022/09/26/%E3%80%8A%E5%87%A0%E4%BD%95%E5%88%86%E6%9E%90%E3%80%8B%E7%AC%94%E8%AE%B0(6)-%E4%BD%93%E7%A7%AF%E6%AF%94%E8%BE%83%E5%AE%9A%E7%90%86/</url>
+    <content><![CDATA[<h2 id="好的情形"><a href="#好的情形" class="headerlink" title="好的情形"></a>好的情形</h2><p>我们回忆对$\operatorname{Ric}\ge (n-1)K$的完备流形, $p\in M,$
+$\,\forall\,x\in S_p\setminus\{p\},$ 我们有:</p>
+<script type="math/tex; mode=display">
+\Delta r(x)\le (n-1)\frac{sn_k'(r)}{sn_k(r)}.</script><p> 在法坐标系下,
+$dV_g=\Theta (r,\theta)dr\wedge dS^{n-1},$</p>
+<script type="math/tex; mode=display">
+\frac{\partial {}\Theta}{\partial {}r}=\Delta r\Theta.</script><script type="math/tex; mode=display">
+\frac{\partial {}\log\Theta}{\partial {}r}=\Delta r\le \frac{\partial {}\log sn_k^{n-1}(r)}{\partial {}r}.</script><script type="math/tex; mode=display">
+\frac{\partial {}\log \frac{\Theta}{\Theta_k} }{\partial {}r}\le 0.</script><p>因此$\frac{\Theta}{\Theta_k}$单减,
+$\lim_{r\rightarrow 0}\frac{\Theta}{\Theta_k}=1,$
+从而$\Theta\le \Theta_k,$ 在$x\in \widehat{S}_p$时.</p>
+<p>注意到$r_1&lt;r_2$时,
+$\frac{\partial^\ast B_{r_1}^n}{r_1}\supset \frac{\partial^\ast B_{r_2}^n}{r_2}.$</p>
+<script type="math/tex; mode=display">
+\frac{\mathcal{H}^{n-1}(\partial^\ast B_{r_2}^g)}{S_k(r_2)}=\int_{\partial^\ast B_{r_2}^n/r_2}\frac{\Theta(r_2,\theta)}{c_nsn_k^{n-1}(r_2)}dS^{n-1}\le \int_{\partial^\ast B_{r_2}^n/r_2}\frac{\Theta(r_1,\theta)}{c_nsn_k^{n-1}(r_1)}dS^{n-1}\le \frac{\mathcal{H}^{n-1}(\partial^\ast B_{r_1}^g)}{S_k(r_1)}.</script><p><strong>定理 1</strong>. <em>$\operatorname{Ric}\ge (n-1)K$时, $\frac{\mathcal{H}^{n-1}(\partial^\ast B_r^g(p))}{S_k(r)}$单调递减.</em> </p>
+<p><strong>推论 2</strong> (Myers’ Thm). <em>$\operatorname{Ric}\ge (n-1)K&gt;0$时, $\operatorname{diam}(M)\le \frac{\pi}{\sqrt{K} }$</em> </p>
+<p>标准的做法是第二变分方法. 现在我们利用体积比较定理给出证明.</p>
+<p>设$\operatorname{diam}(M)&gt;\frac{\pi}{\sqrt{K} },$ 那么$\,\exists\,p,$
+使得$\partial^\ast B^g_{\frac{\pi}{\sqrt{K} } }(p)\neq \varnothing.$
+$\mathcal{H}^{n-1}(\partial^\ast B^g_{\frac{\pi}{\sqrt{K} } }(p))&gt;0.$
+但此时$S_k(\frac{\pi}{\sqrt{K} })=0,$ 比值为$+\infty,$ 与单减性矛盾.</p>
+<h2 id="一般情形"><a href="#一般情形" class="headerlink" title="一般情形"></a>一般情形</h2><p>事实上, 可以说明一般的体积比较定理:</p>
+<p><strong>定理 3</strong>. <em>$\operatorname{Ric}\ge (n-1)K,$ $\frac{\mathcal{H}^{n-1}(\partial B_r^g(p))}{S_k(r)}$单调递减.</em> </p>
+<script type="math/tex; mode=display">
+\mathcal{H}^{n-1}(\partial B_r^g(p))=\int_{\partial^\ast B_r^n/r}\Theta(r,\theta)dS^{n-1}+\frac{1}{2}\int_{(\partial B_r^n\cap \widehat{N}_p)/r}\Theta(r,\theta)dS^{n-1}.</script><p>$\Theta$在$\widehat{C}_p$上良定,</p>
+<script type="math/tex; mode=display">
+\frac{\Theta(r_1,\theta)}{sn_k^{n-1}(r_1)}\le \frac{\Theta(r_2,\theta)}{sn_k^{n-1}(r_2)},\quad r_1>r_2, (r_1,\theta)\in \widehat{S}_p.</script><p>上式当$(r_1,\theta)\in\widehat{N_p}$时也对. 同时注意到有:</p>
+<script type="math/tex; mode=display">
+(\partial B_{r_2}^n\cap \widehat{N}_p)/r_2\subset \partial^\ast B_{r_1}^n/r_1,\quad r_1<r_2.</script><p>因此类似的, 通过积分放缩即可得到结论.</p>
+<p><strong>定理 4</strong>. <em>$\operatorname{Ric}\ge (n-1)K,$ $\frac{\mathrm{vol}(B_r^g(p))}{V_k(r)}$单调递减.</em> </p>
+<p>在$T_pM\cong \mathbb{R}^n$上,
+定义$\widetilde{\Theta}|_{\widehat{S}_p}=\Theta,$ 其他部分取零. 那么</p>
+<script type="math/tex; mode=display">
+\mathrm{vol}(B_r^g(p))=\int_{B_r^n}\widetilde{\Theta}drdS^{n-1}=\int_0^r\int_{S^{n-1} }\widetilde{\Theta}(r,\theta)dsdS^{n-1}\in AC_{loc}(0,+\infty)</script><script type="math/tex; mode=display">
+\begin{aligned}
+ \frac{d {} }{d {}r}\frac{\mathrm{vol}(B_r^g(p))}{V_k(r)}&=\frac{1}{V_k^2(r)}\cdot \left(\int_{\partial^*B^g_r/r}\Theta dS^{n-1}V_k(r)-\int_0^r\int_{\partial^*B^g_s/s}\Theta dS^{n-1}S_k(r)\right)\\
+ &=\frac{S_k(r)}{V_k(r)}\left(\frac{\mathcal{H}^{n-1}(\partial^* B_r^g)}{S_k(r)}-\frac{\int_0^r\frac{\mathcal{H}^{n-1}(\partial^*B_s^g)ds}{S_k(s)}S_k(s)}{\int_0^rS_k(s)ds}\right)\le 0
+ \end{aligned}</script><p> 由此即可得到结论.</p>
+<p>体积比较定理一般用来估计下界而非上界.</p>
+<p><strong>推论 5</strong>. <em>$\operatorname{Ric}\ge (n-1)K,$ $\operatorname{diam}M=1,$ 有非塌缩条件$\mathrm{vol}(M)\ge v_0&gt;0.$ 那么$\,\exists\,C_1=C_1(n,k,v_0),C_2=C_2(n,k,v_0)&gt;0,$</em> </p>
+<script type="math/tex; mode=display">
+0<C_1\le \frac{\mathrm{vol}(B_r^g(p))}{r^n}\le C_2.</script><p>由体积比较定理, 有</p>
+<script type="math/tex; mode=display">
+0<\frac{\mathrm{vol}(M)}{V_k(1)}\le \frac{\mathrm{vol}(B_r^g(p))}{V_k(r)}\le 1.</script><p>由</p>
+<script type="math/tex; mode=display">
+\max_{[0,1]}\frac{V_k(r)}{r^n}<+\infty, \quad \inf_{[0,1]}\frac{V_k(r)}{r^n}>0</script><p>即有结论.</p>
+<p><strong>推论 6</strong>. <em>$\operatorname{Ric}\ge (n-1)K,$ $r_1&lt;r_2,$</em> </p>
+<script type="math/tex; mode=display">
+\frac{\mathrm{vol}(B_{r_2}^g(p)\setminus B_{r_1}^g(p))}{V_k(r_2)-V_k(r_1)}\le \frac{\mathrm{vol}(B_{r_2}^g(p))}{V_k(r_2)}\le \frac{\mathrm{vol}(B_{r_1}^g(p))}{V_k(r_1)}</script><p>取$r_1&lt;r&lt;r_2,$ 令$r\rightarrow r_2,$ 即有</p>
+<script type="math/tex; mode=display">
+\frac{\mathcal{H}^{n-1}(\partial^\ast B_{r_2}^g)}{S_k(r_2)}\le \frac{\mathrm{vol}(B_{r_1}^g(p))}{V_k(r_1)}</script><p>可选到$r_2’\in (r_1,r_2),$
+使得$\mathcal{H}^{n-1}(\partial^\ast B_{r_2’}^g)=\mathcal{H}^{n-1}(\partial B_{r_2’}^g)$</p>
+<script type="math/tex; mode=display">
+\frac{\mathcal{H}^{n-1}(\partial^\ast B_{r_2}^g)}{S_k(r_2)}\le \frac{\mathcal{H}^{n-1}(\partial B_{r_2}^g)}{S_k(r_2)}\le\frac{\mathcal{H}^{n-1}(\partial B_{r_2'}^g)}{S_k(r_2')} \le \frac{\mathrm{vol}(B_{r_1}^g(p))}{V_k(r_1)}</script><p><strong>推论 7</strong>. <em>$\operatorname{Ric}\ge (n-1)K,$ $r_1&lt;r_2,$</em> </p>
+<script type="math/tex; mode=display">
+\frac{\mathcal{H}^{n-1}(\partial B_{r_2}^g(p))}{S_k(r_2)}\le \frac{\mathrm{vol}(B_{r_1}^g(p))}{V_k(r_1)}</script><p><strong>定理 8</strong>. <em>$\operatorname{Ric}\ge 0$时, $(M,g)$紧, 或$\mathrm{vol}(B_R^g(p))\ge CR$比线性增长快.</em> </p>
+<p>若$(M,g)$非紧, 取$d(p,x_k)=k.$</p>
+<script type="math/tex; mode=display">
+\frac{\mathrm{vol}(B_{k+1}(x_k)\setminus B_{k-1}(x_k))}{\omega_n((k+1)^n-(k-1)^n)}\le\frac{\mathrm{vol}(B_{k-1}(x_k))}{\omega_n(k-1)^n}</script><script type="math/tex; mode=display">
+\mathrm{vol}(B_{2k(p)})\ge \mathrm{vol}(B_{k-1}(x_k))\ge Ck\mathrm{vol}(B_{k+1}(x_k)\setminus B_{k-1}(x_k))\ge Ck\mathrm{vol}(B_1(p))</script><p><strong>注 9</strong>. <em>若$\operatorname{Ric}\ge (n-1)K,$ 若$B_r^g,\partial B_r^g,\partial^\ast B_r^g$任意一项与标准体积比取$1,$ 则$B_r^g(p)\cong B_r^k.$</em> </p>
+<p>文章最后更新于 2022-09-26 19:08:33 </p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>几何</category>
+        <category>几何分析</category>
+      </categories>
+  </entry>
 </search>
