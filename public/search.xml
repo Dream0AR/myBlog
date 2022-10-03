@@ -8914,6 +8914,81 @@ $F$为双射的情形是上面的自然推论.</p>
       </categories>
   </entry>
   <entry>
+<<<<<<< HEAD
+=======
+    <title>《代数拓扑2》笔记(5)-上同调谱序列</title>
+    <url>/2022/09/29/%E3%80%8A%E4%BB%A3%E6%95%B0%E6%8B%93%E6%89%912%E3%80%8B%E7%AC%94%E8%AE%B0(5)-%E4%B8%8A%E5%90%8C%E8%B0%83%E8%B0%B1%E5%BA%8F%E5%88%97/</url>
+    <content><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>上同调谱序列和同调谱序列是类似的, 只是箭头都反了过来. 总的来说, 我们有:</p>
+<ul>
+<li><p>$R$模 $E_r^{p,q},$</p>
+</li>
+<li><p>微分$\delta_r:E_r^{p,q}\rightarrow E_r^{p+r,q-r+1},$</p>
+</li>
+</ul>
+<p>上链复形上滤列的包含关系将是反过来的, 即 </p>
+<script type="math/tex; mode=display">
+F_pC^\ast \supset F_{p+1}C^\ast .</script><p>这就给出了谱序列$(E_r^{p,q},\delta_r),$ $E_1^{p,q}=H^{p+q}(G_pC^\ast ).$
+谱序列收敛到$E_\infty^{p,q}=G_pH^{p+q}(C^\ast )$若滤列对每个$C^i$有界.</p>
+<h2 id="乘法结构"><a href="#乘法结构" class="headerlink" title="乘法结构"></a>乘法结构</h2><p>设$(C^\ast ,\delta)$有一个乘法结构(本身满足运算律如结合律等),</p>
+<script type="math/tex; mode=display">
+\cup:C^i\otimes C^j\rightarrow C^{i+j},</script><p> 我们希望它与微分和滤列兼容,
+这样它就可以放到谱序列上.</p>
+<p>与微分的兼容性要求它是导子:</p>
+<script type="math/tex; mode=display">
+\delta(\alpha\cup \beta)=(\delta\alpha)\cup \beta+(-1)^i\alpha\cup(\delta\beta),\quad \alpha\in C^i.</script><p>与滤列的兼容性要求:</p>
+<script type="math/tex; mode=display">
+\cup:F_pC^\ast \otimes F_{p'}C^\ast \rightarrow F_{p+p'}C^\ast .</script><p>这样$\cup$便(归纳地)诱导了一个谱序列上良定的乘法:</p>
+<script type="math/tex; mode=display">
+\cup_r:E_r^{p,q}\otimes E_r^{p',q'}\rightarrow E_r^{p+p',q+q'}.</script><p><strong>命题 1</strong>. <em>$\delta_r$是$E_r^{p,q}$上的一个导子, 即:</em> </p>
+<script type="math/tex; mode=display">
+\delta_r(\alpha\cup_r \beta)=(\delta_r\alpha)\cup_r\beta+(-1)^{|\alpha|}\alpha\cup_r(\delta_r\beta),\quad |\alpha|:=p+q,\quad \alpha\in E_r^{p,q}.</script><p><strong>命题 2</strong>. <em>若滤列对每个$C^i$有界, 那么$E_\infty^{p,q}$上的乘法结构与$G_pH^{p+q}(C^\ast )$上自然的乘法结构相容.</em> </p>
+<p>我们说$E_r$是一个代数谱序列, 若它有一个乘法结构.</p>
+<h2 id="Leray-Serre上同调谱序列"><a href="#Leray-Serre上同调谱序列" class="headerlink" title="Leray-Serre上同调谱序列"></a>Leray-Serre上同调谱序列</h2><p>对于Serre纤维化, $B$道路连通, </p>
+<script type="math/tex; mode=display">
+F\rightarrow E\xrightarrow{\pi} B</script><p>对于交换环$R,$ $H^\ast (F;R)$是一个(分级交换)$R$代数,
+$E_2^{p,q}=H^p(B;H^q(F;R))$是一个$R$代数, $E_r$是一个代数谱序列,
+$E_\infty^{p,q}=G_pH^{p+q}(E;R).$</p>
+<p><strong>注 3</strong>. <em>若$\cup$表示$H^\ast (B;H^\ast (F;R))$上的标准乘法结构, $\cup_2$是$E_2^{p,q}$上的乘法结构, 那么</em> </p>
+<script type="math/tex; mode=display">
+\alpha\cup_2\alpha'=(-1)^{qp'}\alpha\cup\alpha',\quad \alpha\in E_2^{p,q},\alpha'\in E_2^{p',q'}.</script><p>我们的目标是让$(E_r,\delta_r,\cup_r)$成为微分分级代数, 使得有</p>
+<script type="math/tex; mode=display">
+\alpha\beta=(-1)^{|\alpha||\beta|}\beta\alpha,</script><script type="math/tex; mode=display">
+\delta(\alpha\beta)=(\delta \alpha)\beta+(-1)^{|\alpha|}\alpha(\delta\beta).</script><p><strong>定理 4</strong>. <em>$H^\ast (SU(n))\cong \Lambda^\ast (a_3,a_5,\cdots,a_{2k-1})$为代数同构(后者为外代数).</em> </p>
+<p>用归纳法. $n=1$平凡. 对$n\ge 2,$ 考虑</p>
+<script type="math/tex; mode=display">
+SU(n-1)\rightarrow SU(n)\rightarrow S^{2n-1},</script><p> 考虑它的构造.
+$SU(n)$可迁地作用在$S^{2n-1}\subset \mathbb{C}^n$上,
+$(1,0,\cdots,0)$的稳定子就是$SU(n-1).$
+从而$S^{2n-1}\cong \frac{SU(n)}{SU(n-1)}.$</p>
+<p>考虑Leray-Serre谱序列,</p>
+<script type="math/tex; mode=display">
+E_2=H^\ast (S^{2n-1};H^\ast (SU(n-1)))\cong H(S^{2n-1})\otimes H^\ast (SU(n-1)).</script><p>谱序列如下图所示,
+唯一一个可能非零的$\delta_{2n-1}$由导子性质也是零(通过分解).
+从而谱序列从$E_2$开始就停止.</p>
+<script type="math/tex; mode=display">
+E_\infty=E_2=H^\ast (S^{2n-1})\otimes \Lambda^\ast (a_3,\cdots,a_{2n-3})=\Lambda^\ast (a_3,\cdots,a_{2n-1}).</script><p>新加的生成元对应于$H^{2n-1}(S^{2n-1})$的生成元.</p>
+<p><img style='margin: auto;' src=https://s2.loli.net/2022/09/29/5Gl2EeTHFSdACcg.png width='50%' height='50%'></p>
+<p>注意到$\Lambda^\ast (a_3,\cdots,a_{2n-1})$是一个自由代数, 延展问题是平凡的,
+从而</p>
+<script type="math/tex; mode=display">
+\bigoplus_i H^i(SU(n))\cong \bigoplus_i\bigoplus_pG_pH^i(SU(n))=\bigoplus_i\bigoplus_p E_{\infty}^{p,i-p}.</script><p><strong>定理 5</strong>. <em>若$E_\infty$是自由的分级交换双分级代数, 那么$H^\ast \cong E_\infty$为代数同构.</em> </p>
+<h2 id="边同态"><a href="#边同态" class="headerlink" title="边同态"></a>边同态</h2><p>假设$E_2\Rightarrow H^\ast $为第一象限, 那么</p>
+<script type="math/tex; mode=display">
+E_\infty^{0,q}\hookrightarrow \cdots \hookrightarrow E_3^{0,q}\hookrightarrow E_2^{0,q}</script><script type="math/tex; mode=display">
+E_2^{p,0}\twoheadrightarrow E_3^{p,0}\twoheadrightarrow \cdots\twoheadrightarrow E_\infty^{p,0}</script><p>进一步,</p>
+<script type="math/tex; mode=display">
+E_\infty^{0,q}=G_0H^q=\frac{F_0H^q}{F_1H^q},\quad H^q\twoheadrightarrow E_\infty^{0,q};</script><script type="math/tex; mode=display">
+E_\infty^{p,0}=G_pH^p=\frac{F_pH^p}{F_{p+1}H^p=0}, \quad E_\infty^{p,0}\hookrightarrow H^p.</script><p>可以定义边同态研究两者的关系.</p>
+<p>文章最后更新于 2022-09-29 16:15:30 </p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>代数拓扑</category>
+        <category>代数拓扑2</category>
+      </categories>
+  </entry>
+  <entry>
+>>>>>>> 6559d46aa9e3036925dd612e599c285a54f1670e
     <title>《微分流形》笔记-李群</title>
     <url>/2022/09/28/%E3%80%8A%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2%E3%80%8B%E7%AC%94%E8%AE%B0-%E6%9D%8E%E7%BE%A4/</url>
     <content><![CDATA[<p>Introduction to smooth manifolds by John M. Lee</p>
@@ -9024,4 +9099,120 @@ G\approx G\times\{p\}\hookrightarrow G\times M\xrightarrow{\theta}M</script><p>�
         <category>微分流形</category>
       </categories>
   </entry>
+<<<<<<< HEAD
+=======
+  <entry>
+    <title>《微分流形》笔记-横截性</title>
+    <url>/2022/09/29/%E3%80%8A%E5%BE%AE%E5%88%86%E6%B5%81%E5%BD%A2%E3%80%8B%E7%AC%94%E8%AE%B0-%E6%A8%AA%E6%88%AA%E6%80%A7/</url>
+    <content><![CDATA[<p>Introduction to smooth manifolds by John M. Lee</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>称$M$中两个嵌入子流形$S,S’$是<strong>横截相交的</strong>,
+若$\,\forall\,p\in S\cap S’,$ 切空间$T_pS,T_pS’$张成了$T_pM.$
+更一般地我们将它定义到函数上: 设$F:N\rightarrow M$为光滑映照,
+$S\subset M$为嵌入子流形. 称$F$与$S$横截相交,
+若$\,\forall\,x\in F^{-1}(S),$ $T_{F(x)}S,dF_x(T_{xN})$张成了$T_F(x)M.$</p>
+<p><strong>定理 1</strong>. <em>若$F:N\rightarrow M$与嵌入子流形$S\subset M$横截相交, 那么$F^{-1}(S)$是$N$中的嵌入子流形, 余维数与$S$在$M$中的余维数相同. 若$S’$与$S$横截相交, 那么$S’\cap S$是$M$中的嵌入子流形, 余维数为$S,S’$余维数之和.</em> </p>
+<p>利用秩定理即可给出证明. 由于淹没自动是横截相交的, 我们有推论:</p>
+<p><strong>推论 2</strong>. <em>设$N,M$是光滑流形, $S\subset M$是余维数为$k$的嵌入子流形, $F:N\rightarrow M$为淹没. 那么$F^{-1}(S)$是余维数为$k$的嵌入子流形.</em> </p>
+<p>横截性提供了更为简洁的判别函数图像的方法.
+下面的定理是隐函数定理的整体形式.</p>
+<p><strong>定理 3</strong>. <em>设$M,N$为光滑流形, $S\subset M\times N$为子流形, $\pi_M,\pi_N$为$M\times N$上的投影. 那么如下的命题是等价的:</em> </p>
+<ol>
+<li><p><em>$S$为某光滑映照$f:M\rightarrow N$的图像.</em></p>
+</li>
+<li><p><em>$\pi_M|_S:S\approx M$为微分同胚.</em></p>
+</li>
+<li><p><em>$\,\forall\,p\in M,$ $S$与$\{p\}\times N$在且仅在一点横截相交.</em></p>
+</li>
+</ol>
+<p><em>若条件满足, 那么$S$为$f=\pi_N\circ (\pi_M|_S)^{-1}$的图像.</em></p>
+<p><strong>推论 4</strong>. <em>设$M,N$为光滑流形, $S\subset M\times N$为子流形, $(p,q)\in S.$ 若$S$与$\{p\}\times N$在$(p,q)$点横截相交, 那么存在$p$点邻域$U\subset M$与$(p,q)$点邻域$V\subset S,$ 使得$V$是光滑映照$f:U\rightarrow N$的图像.</em> </p>
+<p>应用Sard定理可以证明下面的重要定理:</p>
+<p><strong>定理 5</strong> (参数化横截性定理). <em>设$N,M$为光滑流形, $X\subset M$为嵌入子流形. 若光滑映照$F:N\times S\rightarrow M$与$X$横截相交, 那么对几乎处处的$s\in S,$ $F_s:N\rightarrow M$与$X$横截相交.</em> </p>
+<p>为了应用参数化横截性定理, 我们需要一族满足要求的函数. 由下面的定理,
+这是可以做到的.</p>
+<p><strong>定理 6</strong> (横截同伦定理). <em>设$M,N$为光滑流形, $X\subset M$为嵌入子流形. 每个光滑映照$f:N\rightarrow M$同伦于一个光滑函数$g:N\rightarrow M,$ 与$X$横截.</em> </p>
+<p>文章最后更新于 2022-09-29 17:55:02 </p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>几何</category>
+        <category>微分流形</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>《代数拓扑2》笔记(6)-边同态</title>
+    <url>/2022/10/03/%E3%80%8A%E4%BB%A3%E6%95%B0%E6%8B%93%E6%89%912%E3%80%8B%E7%AC%94%E8%AE%B0(6)-%E8%BE%B9%E5%90%8C%E6%80%81/</url>
+    <content><![CDATA[<h2 id="上同调的Leray-Serre谱序列"><a href="#上同调的Leray-Serre谱序列" class="headerlink" title="上同调的Leray-Serre谱序列"></a>上同调的Leray-Serre谱序列</h2><p>一些不加说明的具体构造过程如下所示:</p>
+<script type="math/tex; mode=display">
+F\rightarrow E\xrightarrow{\pi}B,</script><script type="math/tex; mode=display">
+\cdots \subset B^p\subset B^{p+1}\subset \cdots,</script><script type="math/tex; mode=display">
+E^p:=\pi^{-1}(B^p),</script><script type="math/tex; mode=display">
+\cdots\subset E^p \subset E^{p+1}\subset\cdots,</script><script type="math/tex; mode=display">
+F_pC_\ast (E):=C_\ast (E^p),\quad F_pC^\ast (E):=\operatorname{Ann}(F_{p-1}C_\ast )=\{f:f|_{F_{p-1}C_\ast }=0\}\subset \operatorname{Hom}(C_\ast ;R).</script><p>$F_pC^\ast (E)$是$C^\ast (E)$上的一列递减滤列. 从而构造谱序列.</p>
+<h2 id="边同态"><a href="#边同态" class="headerlink" title="边同态"></a>边同态</h2><p>在第一象限, 我们有自然的映射列:</p>
+<script type="math/tex; mode=display">
+E_\infty^{0,q}\hookrightarrow\cdots\hookrightarrow E_3^{0,q}\hookrightarrow E_2^{0,q}</script><script type="math/tex; mode=display">
+E_2^{p,0}\twoheadrightarrow{E_3^{p,0} }\twoheadrightarrow\cdots \twoheadrightarrow E_\infty^{p,0}</script><p>那么,</p>
+<script type="math/tex; mode=display">
+E_\infty^{0,q}=G_0H^q,\quad H^q\twoheadrightarrow{E_\infty^{0,q} }</script><script type="math/tex; mode=display">
+E_\infty^{p,0}=G_pH^p,\quad E_\infty^{p,0}\hookrightarrow H^p.</script><p>用上面映射的复合定义边同态:</p>
+<script type="math/tex; mode=display">
+H^q\twoheadrightarrow E_\infty^{0,q} \hookrightarrow E_2^{0,q},</script><script type="math/tex; mode=display">
+E_2^{p,0}\twoheadrightarrow E_\infty^{p,0}\hookrightarrow H^p</script><p>考虑谱序列 </p>
+<script type="math/tex; mode=display">
+F\xrightarrow{\iota}E\xrightarrow{\pi}B,</script><p> $F$连通,
+$B$单连通. 那么边同态</p>
+<script type="math/tex; mode=display">
+H^q(E;R)\twoheadrightarrow E_\infty^{0,q}\hookrightarrow E_2^{0,q}= H^0(B;H^q(F;R))=H^q(F;R).</script><p>是$\iota^\ast =H^q(\iota).$ 若$\iota^\ast $是满射, 那么上行的嵌入也是满射,
+从而是同构, 得到谱序列的信息.</p>
+<script type="math/tex; mode=display">
+H^p(B;R)=H^p(B;H^0(F,R))=E_2^{p,0}\twoheadrightarrow E_\infty^{p,0} \hookrightarrow H^p(E;R)</script><p>是$\pi^\ast =H^p(\pi).$ 若$\pi^\ast $是单射, 那么上行的满射是同构.</p>
+<h2 id="Leray-Hirsch定理"><a href="#Leray-Hirsch定理" class="headerlink" title="Leray-Hirsch定理"></a>Leray-Hirsch定理</h2><p><strong>定理 1</strong>. <em>对于纤维化$F\xrightarrow{\iota}E\xrightarrow{\pi}B,$ $B$道路连通. 若$\iota^\ast :H^q(E)\rightarrow H^q(F)$是满射, $\,\forall\,q,$ 且$H^\ast (F)$是有限生成自由Abel群, 那么$H^\ast (E)\cong H^\ast (B)\otimes H^\ast (F)$作为$H^\ast (B)$模同构.</em> </p>
+<p>证明思路: 满射的条件给出$\pi_1(B)$在$H^\ast (F)$上的作用是平凡的.
+而有限生成自由Abel的条件说明了</p>
+<script type="math/tex; mode=display">
+E_2^{p,q}=H^p(B;H^q(F))\cong H^p(B)\otimes H^q(F).</script><p>由于边上的微分都是零, 由微分的导子性质, 所有地方的微分都是零.
+这就立刻得到了谱序列从第二页开始就不再变化, 从而收敛得到结论.</p>
+<p>若我们能够找到$\iota,\pi$对应的截面,
+那么立即有$\iota^\ast ,\pi^\ast $是满射/单射.</p>
+<h2 id="Hurewicz定理及其推广"><a href="#Hurewicz定理及其推广" class="headerlink" title="Hurewicz定理及其推广"></a>Hurewicz定理及其推广</h2><p><strong>定理 2</strong> (Hurewicz). <em>设$X$是单连通的, 那么$\pi_i(X)=0,$ $\,\forall\,i&lt;n$ 当且仅当$\widetilde{H}_i(X)=0,$ $\,\forall\,i&lt;n.$ 若条件满足, 那么$\pi_n(X)\cong H_n(X).$</em> </p>
+<p>对$n$归纳, 考虑道路纤维化: </p>
+<script type="math/tex; mode=display">
+\Omega X\rightarrow PX\rightarrow X</script><p>其中$\Omega X$是环空间, $PX$是道路空间, 可缩. $\,\forall\,q&lt;n-1,$
+由归纳假设, </p>
+<script type="math/tex; mode=display">
+0=\pi_{q+1}(X)\cong \pi_q(\Omega X)\cong H_q(\Omega X).</script><script type="math/tex; mode=display">
+\pi_n(X)\cong \pi_{n-1}(\Omega X)\cong H_{n-1}(\Omega X).</script><p>我们的目标是关联$H_\ast (\Omega X),$ $H_\ast (X).$</p>
+<p>由Leray-Serre谱序列, $E^2_{p,q}=H_p(X;H_q(\Omega X)),$ 但由于$PX$可缩,
+$E^\infty_{p,q}=0$除了$E^\infty_{0,0}.$
+也就是$E^2_{p,q}$上所有元素都会被消灭(除了$(0,0)$).
+那么由下面的谱序列立即得到结论.</p>
+<p><img style='margin: auto;' src=https://s2.loli.net/2022/10/03/lpOkQ58q4Xc1uWz.png width='50%' height='50%'></p>
+<h2 id="Serre类"><a href="#Serre类" class="headerlink" title="Serre类"></a>Serre类</h2><p>Serre类$\mathscr{C}$是一个由Abel群组成的非空集, 使得对任意短正合列</p>
+<script type="math/tex; mode=display">
+0\rightarrow A\rightarrow B \rightarrow C\rightarrow 0,</script><p>$B\in \mathscr{C}$当且仅当$A,C\in \mathscr{C}.$
+我们称$\mathscr{C}$是”好”的, 若</p>
+<script type="math/tex; mode=display">
+\,\forall\,A,B\in \mathscr{C},\quad A\otimes B,\operatorname{Tor}(A,B)\in \mathscr{C}.</script><p>几个例子是: $\{0\}$,{挠Abel群(每个元素阶有限)}, {有限Abel群}.
+{有限生成Abel群}, {$p$群(每个元素阶为$p^n$)}.</p>
+<p>我们定义$f:A\rightarrow B$是$\mathscr{C}$单射若$\ker f\in \mathscr{C};$
+称它是$\mathscr{C}$满射, 若$\operatorname{coker}f\in \mathscr{C}.$
+称它是$\mathscr{C}$同构若满足以上两个条件.</p>
+<p><strong>定理 3</strong> (推广Hurewicz). <em>令$X$是单连通的, $\mathscr{C}$是好Serre类. 那么$\pi_i(X)\in \mathscr{C},$ $\,\forall\,i&lt;n$ 当且仅当$\widetilde{H}_i(X)\in \mathscr{C},$ $\,\forall\,i&lt;n.$ 若条件成立, $\pi_n(X)\rightarrow H_n(X)$是$\mathscr{C}$同构.</em> </p>
+<p>证明思路: 对$n$归纳.</p>
+<script type="math/tex; mode=display">
+\,\forall\,q<n-1, \quad \mathscr{C}\ni \pi_{q+1}(X)\cong_\mathscr{C}H_q(\Omega X),\qquad \pi_n(X)\cong_\mathscr{C}H_{n-1}(\Omega X).</script><script type="math/tex; mode=display">
+E^2_{p,q}=H_p(X;H_q(\Omega X)),\quad H_{\ast }(PX)=H_{\ast }(\ast )</script><p>从而由$H_q(\Omega X)\in \mathscr{C},$ $E^2_{p,q}\in \mathscr{C}.$
+再次由谱序列得到结论.</p>
+<p><strong>推论 4</strong>. <em>若$X$是单连通有限CW复形, 那么$\pi_i(X)$是有限生成的, $\,\forall\,i.$</em> </p>
+<p><strong>注 5</strong>. <em>$\pi_2(S^1\vee S^2)$并不是有限生成的.</em> </p>
+<p>文章最后更新于 2022-10-03 17:32:02 </p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+        <category>代数拓扑</category>
+        <category>代数拓扑2</category>
+      </categories>
+  </entry>
+>>>>>>> 6559d46aa9e3036925dd612e599c285a54f1670e
 </search>
