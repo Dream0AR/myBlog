@@ -3881,23 +3881,7 @@ $\eta=fdx^2\wedge\cdots\wedge dx^n,$ 故$\omega=dx^1\wedge \eta.$</p>
 <script type="math/tex; mode=display">
 i_V(d\omega)=-i_Vdx^1\wedge d\eta=-Vx^1\wedge d\eta +dx^1\wedge i_V(d\eta)</script><script type="math/tex; mode=display">
 d(i_V\omega)=d(Vx^1\wedge\eta-dx^1\wedge i_V\eta)=d(Vx^1)\wedge \eta +Vx^1 \wedge d\eta+dx^1\wedge d(i_V\eta)</script><p>由此即得到结论.</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<h1 id="文章最后更新于-2022-10-05-00-16-16"><a href="#文章最后更新于-2022-10-05-00-16-16" class="headerlink" title="文章最后更新于 2022-10-05 00:16:16 "></a>文章最后更新于 2022-10-05 00:16:16 </h1><p>文章最后更新于 2022-10-07 13:21:51 </p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>fe96463c9b9f0d0bbfa3f6136a2aa887ae510bb6</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+<p>文章最后更新于 2022-10-07 13:21:51 </p>
 ]]></content>
       <categories>
         <category>笔记</category>
